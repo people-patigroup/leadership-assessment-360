@@ -496,14 +496,23 @@
             const select = document.getElementById('assesseeName');
             
             try {
-                const response = await fetch(APPS_SCRIPT_URL + '?action=getConfig', {
-                    method: 'GET',
-                    mode: 'cors'
-                });
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+                const response = await fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData)
+});
+
+const result = await response.json();
+
+if (result.status === 'success') {
+    localStorage.removeItem('leadership_assessment_draft');
+    document.getElementById('loadingDiv').classList.remove('active');
+    document.getElementById('successMessage').classList.add('active');
+} else {
+    throw new Error(result.message || 'Unknown error');
+}
                 
                 const text = await response.text();
                 const data = JSON.parse(text);
