@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh Giá Năng Lực Lãnh Đạo 360° - PATI Group</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            margin-bottom: 30px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e5e5e5;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #10b981;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Form Steps */
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            font-size: 13px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+
+        .form-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .required {
+            color: #ef4444;
+        }
+
+        /* Question Cards */
+        .question-group {
+            margin-bottom: 40px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .competency-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #10b981;
+        }
+
+        .question-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+
+        .question-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        /* Radio Options */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .radio-option:hover {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 12px;
+            margin-top: 3px;
+            cursor: pointer;
+        }
+
+        .radio-option.selected {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+
+        .level-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: #10b981;
+            margin-right: 8px;
+        }
+
+        .level-text {
+            flex: 1;
+            font-size: 13px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #059669;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f8f8f8;
+            color: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e5e5;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .success-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #10b981;
+            margin-bottom: 12px;
+        }
+
+        .success-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #e5e5e5;
+            border-top: 4px solid #10b981;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 12px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 24px; }
+            .container { padding: 20px; }
+            .button-group { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .info-box strong {
+            color: #10b981;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 ĐÁNH GIÁ NĂNG LỰC LÃNH ĐẠO 360°</h1>
+        <div class="subtitle">PATI Group - Board Manager Assessment</div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Bước 1/6: Thông tin đánh giá</div>
+        </div>
+
+        <form id="assessmentForm">
+            <!-- Step 1: Basic Info -->
+            <div class="step active" data-step="1">
+                <div class="info-box">
+                    <strong>⏱️ Thời gian:</strong> ~15-20 phút<br>
+                    <strong>🔒 Bảo mật:</strong> Thông tin của bạn được bảo mật tuyệt đối
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Vai trò của bạn <span class="required">*</span></label>
+                    <select class="form-select" id="raterRole" required>
+                        <option value="">-- Chọn vai trò --</option>
+                        <option value="Self">Self (Tự đánh giá)</option>
+                        <option value="Manager">Manager (Cấp trên trực tiếp)</option>
+                        <option value="Peer">Peer (Đồng cấp)</option>
+                        <option value="Direct Report">Direct Report (Cấp dưới)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Người được đánh giá <span class="required">*</span></label>
+                    <select class="form-select" id="assesseeName" required>
+                        <option value="">-- Đang tải danh sách... --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email của bạn (tùy chọn)</label>
+                    <input type="email" class="form-input" id="raterEmail" placeholder="yourname@patigroup.com">
+                </div>
+            </div>
+
+            <!-- Steps 2-5: Question Groups (Will be generated by JS) -->
+            <div class="step" data-step="2" id="step2Questions"></div>
+            <div class="step" data-step="3" id="step3Questions"></div>
+            <div class="step" data-step="4" id="step4Questions"></div>
+            <div class="step" data-step="5" id="step5Questions"></div>
+
+            <!-- Step 6: Open-Ended -->
+            <div class="step" data-step="6">
+                <h2 style="margin-bottom: 20px; color: #1a1a1a;">Chia sẻ góc nhìn của bạn</h2>
+
+                <div class="form-group">
+                    <label class="form-label">Top 3 điểm mạnh của người này</label>
+                    <textarea class="form-textarea" id="top3Strengths" placeholder="Ví dụ: Giao tiếp rõ ràng, Quản lý thời gian tốt, Coaching xuất sắc"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Một ví dụ cụ thể về điểm mạnh nổi bật nhất</label>
+                    <textarea class="form-textarea" id="strengthExample" placeholder="Mô tả tình huống cụ thể khi người này thể hiện xuất sắc..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Top 2 năng lực cần phát triển</label>
+                    <textarea class="form-textarea" id="top2Development" placeholder="Ví dụ: Đào tạo nhân viên, Xây dựng quy trình"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Bạn đề xuất cách nào để người này phát triển?</label>
+                    <textarea class="form-textarea" id="developmentSuggestion" placeholder="Gợi ý cụ thể về training, coaching, hoặc experience cần có..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Feedback quan trọng nhất bạn muốn gửi người này</label>
+                    <textarea class="form-textarea" id="overallFeedback" placeholder="Một feedback xây dựng hoặc động viên..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Người này sẵn sàng làm BOM?</label>
+                    <select class="form-select" id="readinessLevel">
+                        <option value="">-- Chọn đánh giá --</option>
+                        <option value="Not Ready">Chưa sẵn sàng - Cần 12+ tháng phát triển</option>
+                        <option value="Almost Ready">Sắp sẵn sàng - Cần 6-12 tháng coaching</option>
+                        <option value="Ready">Sẵn sàng - Đáp ứng baseline yêu cầu BOM</option>
+                        <option value="Excellent">Xuất sắc - Vượt mong đợi, role model</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Lý do (1 câu)</label>
+                    <input type="text" class="form-input" id="readinessReason" placeholder="Tại sao bạn cho đánh giá này?">
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="button-group">
+                <button type="button" class="btn btn-secondary" id="prevBtn" onclick="changeStep(-1)">← Quay lại</button>
+                <button type="button" class="btn btn-secondary" id="saveDraftBtn" onclick="saveDraft()">💾 Lưu nháp</button>
+                <button type="button" class="btn btn-primary" id="nextBtn" onclick="changeStep(1)">Tiếp tục →</button>
+                <button type="submit" class="btn btn-primary" id="submitBtn" style="display:none;">Gửi đánh giá ✓</button>
+            </div>
+        </form>
+
+        <!-- Loading -->
+        <div class="loading" id="loadingDiv">
+            <div class="spinner"></div>
+            <div style="color: #666;">Đang gửi đánh giá...</div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">✅</div>
+            <div class="success-title">Cảm ơn bạn!</div>
+            <div class="success-text">
+                Đánh giá của bạn đã được ghi nhận.<br>
+                People Team sẽ tổng hợp và phản hồi trong 1-2 tuần.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE'; // TODO: Replace with actual URL
+        
+        let currentStep = 1;
+        const totalSteps = 6;
+        let questionData = {};
+
+        // Question structure (45 questions total)
+        const QUESTIONS = [
+            // Group 1: Management & Systems (Questions 1-18)
+            { 
+                group: 'I. QUẢN LÝ & KIẾN TẠO HỆ THỐNG',
+                competencies: [
+                    {
+                        id: 1,
+                        name: '01. THIẾT LẬP MỤC TIÊU',
+                        questions: [
+                            {
+                                id: 'q1_1',
+                                text: 'Khi nhận mục tiêu chiến lược từ CEO, người này xử lý như thế nào?',
+                                levels: [
+                                    { level: 5, text: 'Xây dựng hệ thống mục tiêu cascade xuống từng cá nhân. Dự đoán bottleneck. Có thể challenge lại nếu bất hợp lý' },
+                                    { level: 4, text: 'Bóc tách dựa data, baseline. Cân đối quality vs speed. Có leading & lagging indicators' },
+                                    { level: 3, text: 'Bóc tách thành sub-goals SMART. Phân biệt outcome vs output. Cần hỗ trợ khi tính trade-off' },
+                                    { level: 2, text: 'Copy-paste mục tiêu cấp trên (CEO nói 20% → đặt 20% cho mọi team)' },
+                                    { level: 1, text: 'Không hiểu hoặc đặt mục tiêu mơ hồ ("làm tốt hơn", "cải thiện chất lượng")' }
+                                ]
+                            },
+                            {
+                                id: 'q1_2',
+                                text: 'Mục tiêu người này đặt có aggressive nhưng achievable không?',
+                                levels: [
+                                    { level: 5, text: 'Aggressive nhưng achievable. Thúc đẩy đột phá không gây burnout. Có cơ chế review điều chỉnh' },
+                                    { level: 4, text: 'Challenging nhưng realistic. Cân bằng các mục tiêu đối trọng (cost vs quality)' },
+                                    { level: 3, text: 'SMART, phù hợp ngữ cảnh. Outcome và output tách bạch' },
+                                    { level: 2, text: 'Có số liệu nhưng thiếu logic. Sao chép máy móc' },
+                                    { level: 1, text: 'Mơ hồ, không đo được. Không phân biệt outcome/output' }
+                                ]
+                            },
+                            {
+                                id: 'q1_3',
+                                text: 'Khi có nhiều mục tiêu cạnh tranh (quality vs speed, cost vs innovation), người này cân bằng ra sao?',
+                                levels: [
+                                    { level: 5, text: 'Framework cân bằng đa mục tiêu. Dự đoán hệ quả từng scenario. Tối ưu portfolio' },
+                                    { level: 4, text: 'Cân đối tốt dựa data và chiến lược. Rationale rõ ràng cho mỗi quyết định' },
+                                    { level: 3, text: 'Nhận diện trade-off, đưa phương án nhưng cần support để quyết định' },
+                                    { level: 2, text: 'Biết conflict nhưng không cân bằng được. Đợi cấp trên quyết định' },
+                                    { level: 1, text: 'Không nhận ra conflict. Cố đạt tất cả không ưu tiên' }
+                                ]
+                            }
+                        ]
+                    }
+                    // TODO: Add remaining competencies 2-6 following same structure
+                ]
+            }
+            // TODO: Add Groups 2-4 following same structure
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadBOMList();
+            loadDraft();
+            updateProgress();
+            generateQuestionSteps();
+        });
+
+        // Load BOM list from Google Sheet
+        async function loadBOMList() {
+            try {
+                const response = await fetch(APPS_SCRIPT_URL + '?action=getConfig');
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    const select = document.getElementById('assesseeName');
+                    select.innerHTML = '<option value="">-- Chọn người được đánh giá --</option>';
+                    
+                    data.data.bomList.forEach(bom => {
+                        const option = document.createElement('option');
+                        option.value = bom.name;
+                        option.textContent = `${bom.name} (${bom.department})`;
+                        select.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading BOM list:', error);
+                alert('Không thể tải danh sách BOM. Vui lòng thử lại sau.');
+            }
+        }
+
+        // Generate question steps dynamically
+        function generateQuestionSteps() {
+            // For demo purposes, using simplified version
+            // In production, loop through full QUESTIONS array
+            
+            const step2 = document.getElementById('step2Questions');
+            step2.innerHTML = `
+                <h2 style="margin-bottom: 20px; color: #1a1a1a;">I. QUẢN LÝ & KIẾN TẠO HỆ THỐNG</h2>
+                <p style="color: #666; margin-bottom: 25px; font-style: italic;">Đánh giá câu hỏi 1-18</p>
+                ${generateCompetencyHTML(QUESTIONS[0].competencies[0])}
+            `;
+        }
+
+        // Generate HTML for one competency
+        function generateCompetencyHTML(competency) {
+            let html = `<div class="question-group">
+                <div class="competency-header">${competency.name}</div>`;
+            
+            competency.questions.forEach(q => {
+                html += `
+                    <div class="question-item">
+                        <div class="question-text">${q.text}</div>
+                        <div class="radio-group">`;
+                
+                q.levels.forEach(level => {
+                    html += `
+                        <label class="radio-option">
+                            <input type="radio" name="${q.id}" value="${level.level}" required onchange="handleRadioChange(this)">
+                            <div>
+                                <span class="level-number">Level ${level.level}</span>
+                                <div class="level-text">${level.text}</div>
+                            </div>
+                        </label>`;
+                });
+                
+                html += `</div></div>`;
+            });
+            
+            html += `</div>`;
+            return html;
+        }
+
+        // Handle radio selection
+        function handleRadioChange(radio) {
+            // Remove selected class from all options in this group
+            const group = radio.closest('.radio-group');
+            group.querySelectorAll('.radio-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            // Add selected class to chosen option
+            radio.closest('.radio-option').classList.add('selected');
+            
+            // Save to questionData
+            questionData[radio.name] = parseInt(radio.value);
+        }
+
+        // Change step
+        function changeStep(direction) {
+            // Validate current step before moving forward
+            if (direction === 1 && !validateCurrentStep()) {
+                return;
+            }
+
+            currentStep += direction;
+            
+            if (currentStep < 1) currentStep = 1;
+            if (currentStep > totalSteps) currentStep = totalSteps;
+
+            // Update UI
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.querySelector(`[data-step="${currentStep}"]`).classList.add('active');
+
+            // Update buttons
+            document.getElementById('prevBtn').style.display = currentStep === 1 ? 'none' : 'block';
+            document.getElementById('nextBtn').style.display = currentStep === totalSteps ? 'none' : 'block';
+            document.getElementById('submitBtn').style.display = currentStep === totalSteps ? 'block' : 'none';
+
+            updateProgress();
+            window.scrollTo(0, 0);
+        }
+
+        // Validate current step
+        function validateCurrentStep() {
+            const currentStepEl = document.querySelector(`[data-step="${currentStep}"]`);
+            const requiredInputs = currentStepEl.querySelectorAll('[required]');
+            
+            for (let input of requiredInputs) {
+                if (!input.value) {
+                    alert('Vui lòng điền đầy đủ thông tin bắt buộc');
+                    input.focus();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            
+            const stepNames = [
+                'Thông tin đánh giá',
+                'Quản lý & Hệ thống (1/4)',
+                'Quản lý & Hệ thống (2/4)',
+                'Quản trị Con người',
+                'Giao tiếp & Lãnh đạo',
+                'Chia sẻ góc nhìn'
+            ];
+            
+            document.getElementById('progressText').textContent = 
+                `Bước ${currentStep}/${totalSteps}: ${stepNames[currentStep - 1]}`;
+        }
+
+        // Save draft to localStorage
+        function saveDraft() {
+            const draft = {
+                raterRole: document.getElementById('raterRole').value,
+                assesseeName: document.getElementById('assesseeName').value,
+                raterEmail: document.getElementById('raterEmail').value,
+                responses: questionData,
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('leadership_assessment_draft', JSON.stringify(draft));
+            alert('✅ Đã lưu nháp thành công!');
+        }
+
+        // Load draft from localStorage
+        function loadDraft() {
+            const draft = localStorage.getItem('leadership_assessment_draft');
+            if (draft) {
+                const data = JSON.parse(draft);
+                if (confirm('Bạn có muốn tiếp tục bản nháp đã lưu?')) {
+                    document.getElementById('raterRole').value = data.raterRole || '';
+                    document.getElementById('assesseeName').value = data.assesseeName || '';
+                    document.getElementById('raterEmail').value = data.raterEmail || '';
+                    questionData = data.responses || {};
+                    
+                    // Restore radio selections
+                    Object.keys(questionData).forEach(key => {
+                        const radio = document.querySelector(`input[name="${key}"][value="${questionData[key]}"]`);
+                        if (radio) {
+                            radio.checked = true;
+                            radio.closest('.radio-option').classList.add('selected');
+                        }
+                    });
+                }
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('assessmentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Prepare data
+            const formData = {
+                raterRole: document.getElementById('raterRole').value,
+                assesseeName: document.getElementById('assesseeName').value,
+                raterEmail: document.getElementById('raterEmail').value,
+                responses: questionData,
+                top3Strengths: document.getElementById('top3Strengths').value,
+                strengthExample: document.getElementById('strengthExample').value,
+                top2Development: document.getElementById('top2Development').value,
+                developmentSuggestion: document.getElementById('developmentSuggestion').value,
+                overallFeedback: document.getElementById('overallFeedback').value,
+                readinessLevel: document.getElementById('readinessLevel').value,
+                readinessReason: document.getElementById('readinessReason').value
+            };
+
+            // Show loading
+            document.getElementById('assessmentForm').style.display = 'none';
+            document.getElementById('loadingDiv').classList.add('active');
+
+            try {
+                const response = await fetch(APPS_SCRIPT_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    // Clear draft
+                    localStorage.removeItem('leadership_assessment_draft');
+                    
+                    // Show success
+                    document.getElementById('loadingDiv').classList.remove('active');
+                    document.getElementById('successMessage').classList.add('active');
+                } else {
+                    throw new Error(result.message || 'Unknown error');
+                }
+            } catch (error) {
+                console.error('Submit error:', error);
+                alert('Có lỗi xảy ra khi gửi đánh giá. Vui lòng thử lại sau.');
+                document.getElementById('loadingDiv').classList.remove('active');
+                document.getElementById('assessmentForm').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
