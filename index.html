@@ -520,26 +520,57 @@
 
         // Load BOM list from Google Sheet
         async function loadBOMList() {
-            try {
-                const response = await fetch(APPS_SCRIPT_URL + '?action=getConfig');
-                const data = await response.json();
-                
-                if (data.status === 'success') {
-                    const select = document.getElementById('assesseeName');
-                    select.innerHTML = '<option value="">-- Chọn người được đánh giá --</option>';
-                    
-                    data.data.bomList.forEach(bom => {
-                        const option = document.createElement('option');
-                        option.value = bom.name;
-                        option.textContent = `${bom.name} (${bom.department})`;
-                        select.appendChild(option);
-                    });
-                }
-            } catch (error) {
-                console.error('Error loading BOM list:', error);
-                alert('Không thể tải danh sách BOM. Vui lòng thử lại sau.');
-            }
+    const select = document.getElementById('assesseeName');
+    
+    try {
+        console.log('🔄 Đang tải danh sách BOM từ:', APPS_SCRIPT_URL + '?action=getConfig');
+        
+        const response = await fetch(APPS_SCRIPT_URL + '?action=getConfig', {
+            method: 'GET',
+            mode: 'cors'
+        });
+        
+        console.log('✅ Response status:', response.status);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+        
+        const text = await response.text();
+        console.log('📦 Raw response:', text.substring(0, 100) + '...');
+        
+        const data = JSON.parse(text);
+        console.log('✅ Parsed data:', data);
+        
+        if (data.status === 'success' && data.data && data.data.bomList) {
+            select.innerHTML = '<option value="">-- Chọn người được đánh giá --</option>';
+            
+            data.data.bomList.forEach(bom => {
+                const option = document.createElement('option');
+                option.value = bom.name;
+                option.textContent = `${bom.name} (${bom.department})`;
+                select.appendChild(option);
+            });
+            
+            console.log('✅ Đã load thành công:', data.data.bomList.length, 'BOMs');
+        } else {
+            throw new Error('Invalid data format from API');
+        }
+    } catch (error) {
+        console.error('❌ Error loading BOM list:', error);
+        
+        // FALLBACK: Load từ Sheet data đã biết
+        select.innerHTML = `
+            <option value="">-- Chọn người được đánh giá --</option>
+            <option value="Kevin">Kevin (CEO)</option>
+            <option value="Seth">Seth (Marketing)</option>
+            <option value="Ethan">Ethan (Affiliate & Community)</option>
+            <option value="Winne">Winne (People)</option>
+        `;
+        
+        console.warn('⚠️ Đã load danh sách fallback. Kiểm tra console để debug.');
+    }
+}
 
         // Generate question steps dynamically
         function generateQuestionSteps() {
