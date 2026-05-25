@@ -15,11 +15,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f5f5f5;
             padding: 20px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             background: white;
             padding: 40px;
@@ -70,7 +70,7 @@
         .progress-text {
             text-align: center;
             color: #666;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
         }
 
@@ -98,16 +98,16 @@
             display: block;
             font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 8px;
-            font-size: 14px;
+            margin-bottom: 10px;
+            font-size: 15px;
         }
 
         .form-input, .form-select, .form-textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             border: 1px solid #e5e5e5;
             border-radius: 8px;
-            font-size: 13px;
+            font-size: 14px;
             font-family: inherit;
             transition: border-color 0.2s;
         }
@@ -118,8 +118,9 @@
         }
 
         .form-textarea {
-            min-height: 100px;
+            min-height: 110px;
             resize: vertical;
+            line-height: 1.6;
         }
 
         .required {
@@ -129,10 +130,11 @@
         .info-box {
             background: #f0fdf4;
             border-left: 4px solid #10b981;
-            padding: 15px;
+            padding: 18px;
             margin-bottom: 25px;
             border-radius: 8px;
-            font-size: 13px;
+            font-size: 14px;
+            line-height: 1.7;
         }
 
         .info-box strong {
@@ -141,40 +143,40 @@
 
         /* Question Container */
         .question-container {
-            margin-bottom: 35px;
-            padding: 20px;
+            margin-bottom: 40px;
+            padding: 25px;
             background: #fafafa;
             border-radius: 8px;
             border-left: 4px solid #10b981;
         }
 
         .question-number {
-            font-size: 12px;
+            font-size: 13px;
             color: #999;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
 
         .question-text {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 18px;
-            line-height: 1.5;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         /* Radio Options */
         .radio-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
         .radio-option {
             display: flex;
             align-items: flex-start;
-            padding: 16px;
+            padding: 18px;
             border: 2px solid #e5e5e5;
             border-radius: 8px;
             cursor: pointer;
@@ -188,10 +190,12 @@
         }
 
         .radio-option input[type="radio"] {
-            margin-right: 12px;
-            margin-top: 2px;
+            margin-right: 14px;
+            margin-top: 3px;
             cursor: pointer;
             flex-shrink: 0;
+            width: 18px;
+            height: 18px;
         }
 
         .radio-option.selected {
@@ -204,18 +208,16 @@
         }
 
         .level-label {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 700;
             color: #10b981;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 6px;
         }
 
         .level-text {
-            font-size: 13px;
+            font-size: 14px;
             color: #333;
-            line-height: 1.5;
+            line-height: 1.65;
         }
 
         /* Buttons */
@@ -223,16 +225,16 @@
             display: flex;
             justify-content: space-between;
             gap: 12px;
-            margin-top: 30px;
-            padding-top: 20px;
+            margin-top: 35px;
+            padding-top: 25px;
             border-top: 1px solid #e5e5e5;
         }
 
         .btn {
-            padding: 12px 25px;
+            padding: 14px 28px;
             border: none;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
@@ -279,15 +281,16 @@
         }
 
         .success-title {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
             color: #10b981;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .success-text {
-            font-size: 14px;
+            font-size: 15px;
             color: #666;
+            line-height: 1.7;
         }
 
         /* Loading */
@@ -316,33 +319,29 @@
             100% { transform: rotate(360deg); }
         }
 
-        .step-divider {
-            text-align: center;
-            color: #ccc;
-            margin: 40px 0;
-            font-size: 12px;
-        }
-
         h2 {
             color: #1a1a1a;
-            font-size: 22px;
-            margin-bottom: 25px;
+            font-size: 24px;
+            margin-bottom: 28px;
             font-weight: 700;
         }
 
         .helper-text {
-            font-size: 12px;
+            font-size: 13px;
             color: #999;
             margin-bottom: 10px;
             font-style: italic;
+            line-height: 1.5;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 24px; }
-            .container { padding: 20px; }
+            h1 { font-size: 26px; }
+            .container { padding: 25px; }
             .button-group { flex-direction: column; }
             .btn { width: 100%; }
+            .question-text { font-size: 15px; }
+            .level-text { font-size: 13px; }
         }
     </style>
 </head>
@@ -365,12 +364,12 @@
                 <div class="info-box">
                     <strong>⏱️ Thời gian:</strong> ~20-25 phút<br>
                     <strong>🔒 Bảo mật:</strong> Thông tin của bạn được bảo mật tuyệt đối<br>
-                    <strong>📋 Tổng:</strong> 41 câu hỏi + phần chia sẻ góc nhìn
+                    <strong>📋 Tổng:</strong> 41 câu hỏi (Self) / 41 câu + chia sẻ góc nhìn (Manager/Peer/Direct Report)
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">Vai trò của bạn <span class="required">*</span></label>
-                    <select class="form-select" id="raterRole" required>
+                    <select class="form-select" id="raterRole" required onchange="handleRoleChange()">
                         <option value="">-- Chọn vai trò --</option>
                         <option value="Self">Self (Tự đánh giá)</option>
                         <option value="Manager">Manager (Cấp trên trực tiếp)</option>
@@ -387,18 +386,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Email của bạn (tùy chọn)</label>
-                    <input type="email" class="form-input" id="raterEmail" placeholder="yourname@patigroup.com">
+                    <label class="form-label">Họ tên của bạn <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="raterName" placeholder="Nguyễn Văn A" required>
                 </div>
             </div>
 
             <!-- Step 2: Questions 1-15 -->
             <div class="step" data-step="2" id="step2Questions"></div>
 
-            <!-- Step 3: Questions 16-28 -->
+            <!-- Step 3: Questions 16-30 -->
             <div class="step" data-step="3" id="step3Questions"></div>
 
-            <!-- Step 4: Questions 29-41 + Open-ended -->
+            <!-- Step 4: Questions 31-41 + Optional Feedback -->
             <div class="step" data-step="4" id="step4Questions"></div>
 
             <!-- Navigation Buttons -->
@@ -413,7 +412,7 @@
         <!-- Loading -->
         <div class="loading" id="loadingDiv">
             <div class="spinner"></div>
-            <div style="color: #666;">Đang gửi đánh giá...</div>
+            <div style="color: #666; font-size: 15px;">Đang gửi đánh giá...</div>
         </div>
 
         <!-- Success Message -->
@@ -428,15 +427,56 @@
     </div>
 
     <script>
-        // Configuration
         const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwRdbCGvXIlPXPfzM9l89YNIjzS2V1YUbocxNTV7e3QkW1B4Nj-SEWYMMSfouMFciKHdA/exec';
         
         let currentStep = 1;
-        const totalSteps = 4;
+        let totalSteps = 4;
         let questionData = {};
+        let selectedRole = '';
 
-        // 41 câu hỏi
-        const QUESTIONS = [{"id": 1, "text": "Khi nh\u1eadn m\u1ee5c ti\u00eau chi\u1ebfn l\u01b0\u1ee3c t\u1eeb CEO, ng\u01b0\u1eddi n\u00e0y x\u1eed l\u00fd nh\u01b0 th\u1ebf n\u00e0o?", "levels": {"5": "X\u00e2y d\u1ef1ng h\u1ec7 th\u1ed1ng m\u1ee5c ti\u00eau cascade xu\u1ed1ng t\u1eebng c\u00e1 nh\u00e2n. D\u1ef1 \u0111o\u00e1n bottleneck. C\u00f3 th\u1ec3 challenge l\u1ea1i n\u1ebfu b\u1ea5t h\u1ee3p l\u00fd", "4": "B\u00f3c t\u00e1ch d\u1ef1a data, baseline. C\u00e2n \u0111\u1ed1i quality vs speed. C\u00f3 leading & lagging indicators", "3": "B\u00f3c t\u00e1ch th\u00e0nh sub-goals SMART. Ph\u00e2n bi\u1ec7t outcome vs output. C\u1ea7n h\u1ed7 tr\u1ee3 khi t\u00ednh trade-off", "2": "Copy-paste m\u1ee5c ti\u00eau c\u1ea5p tr\u00ean (CEO n\u00f3i 20% \u2192 \u0111\u1eb7t 20% cho m\u1ecdi team)", "1": "Kh\u00f4ng hi\u1ec3u ho\u1eb7c \u0111\u1eb7t m\u1ee5c ti\u00eau m\u01a1 h\u1ed3 ('l\u00e0m t\u1ed1t h\u01a1n', 'c\u1ea3i thi\u1ec7n ch\u1ea5t l\u01b0\u1ee3ng')"}}, {"id": 2, "text": "M\u1ee5c ti\u00eau ng\u01b0\u1eddi n\u00e0y \u0111\u1eb7t c\u00f3 aggressive nh\u01b0ng achievable kh\u00f4ng?", "levels": {"5": "Aggressive nh\u01b0ng achievable. Th\u00fac \u0111\u1ea9y \u0111\u1ed9t ph\u00e1 kh\u00f4ng g\u00e2y burnout. C\u00f3 c\u01a1 ch\u1ebf review \u0111i\u1ec1u ch\u1ec9nh", "4": "Challenging nh\u01b0ng realistic. C\u00e2n b\u1eb1ng c\u00e1c m\u1ee5c ti\u00eau \u0111\u1ed1i tr\u1ecdng (cost vs quality)", "3": "SMART, ph\u00f9 h\u1ee3p ng\u1eef c\u1ea3nh. Outcome v\u00e0 output t\u00e1ch b\u1ea1ch", "2": "C\u00f3 s\u1ed1 li\u1ec7u nh\u01b0ng thi\u1ebfu logic. Sao ch\u00e9p m\u00e1y m\u00f3c", "1": "M\u01a1 h\u1ed3, kh\u00f4ng \u0111o \u0111\u01b0\u1ee3c. Kh\u00f4ng ph\u00e2n bi\u1ec7t outcome/output"}}, {"id": 3, "text": "Khi c\u00f3 nhi\u1ec1u m\u1ee5c ti\u00eau c\u1ea1nh tranh (quality vs speed, cost vs innovation), ng\u01b0\u1eddi n\u00e0y c\u00e2n b\u1eb1ng ra sao?", "levels": {"5": "Framework c\u00e2n b\u1eb1ng \u0111a m\u1ee5c ti\u00eau. D\u1ef1 \u0111o\u00e1n h\u1ec7 qu\u1ea3 t\u1eebng scenario. T\u1ed1i \u01b0u portfolio", "4": "C\u00e2n \u0111\u1ed1i t\u1ed1t d\u1ef1a data v\u00e0 chi\u1ebfn l\u01b0\u1ee3c. Rationale r\u00f5 r\u00e0ng cho m\u1ed7i quy\u1ebft \u0111\u1ecbnh", "3": "Nh\u1eadn di\u1ec7n trade-off, \u0111\u01b0a ph\u01b0\u01a1ng \u00e1n nh\u01b0ng c\u1ea7n support \u0111\u1ec3 quy\u1ebft \u0111\u1ecbnh", "2": "Bi\u1ebft conflict nh\u01b0ng kh\u00f4ng c\u00e2n b\u1eb1ng \u0111\u01b0\u1ee3c. \u0110\u1ee3i c\u1ea5p tr\u00ean quy\u1ebft \u0111\u1ecbnh", "1": "Kh\u00f4ng nh\u1eadn ra conflict. C\u1ed1 \u0111\u1ea1t t\u1ea5t c\u1ea3 kh\u00f4ng \u01b0u ti\u00ean"}}, {"id": 4, "text": "K\u1ebf ho\u1ea1ch c\u00f4ng vi\u1ec7c c\u1ee7a ng\u01b0\u1eddi n\u00e0y c\u00f3 milestone, dependency, plan B kh\u00f4ng?", "levels": {"5": "\u0110a ph\u01b0\u01a1ng \u00e1n (best/worst/likely). T\u00edch h\u1ee3p \u0111a ph\u00f2ng ban, synergy. Agile nh\u01b0ng focused", "4": "C\u00f3 priority, dependency, critical path. Plan B. Tracking \u0111i\u1ec1u ch\u1ec9nh \u0111\u1ec1u", "3": "Milestone, ph\u00e2n c\u00f4ng, deadline r\u00f5. Ch\u01b0a t\u00ednh dependency v\u00e0 buffer", "2": "Chung chung ('Q2 marketing', 'th\u00e1ng 5 tuy\u1ec3n ng\u01b0\u1eddi'). Thi\u1ebfu breakdown", "1": "Kh\u00f4ng c\u00f3 k\u1ebf ho\u1ea1ch r\u00f5. L\u00e0m theo c\u1ea3m t\u00ednh t\u1eebng ng\u00e0y"}}, {"id": 5, "text": "Khi d\u1ef1 \u00e1n delay/ph\u00e1t sinh v\u1ea5n \u0111\u1ec1, ng\u01b0\u1eddi n\u00e0y ph\u1ea3n \u1ee9ng th\u1ebf n\u00e0o?", "levels": {"5": "D\u1ef1 \u0111o\u00e1n r\u1ee7i ro tr\u01b0\u1edbc. Nhi\u1ec1u ph\u01b0\u01a1ng \u00e1n d\u1ef1 ph\u00f2ng. Bi\u1ebfn kh\u1ee7ng ho\u1ea3ng th\u00e0nh c\u01a1 h\u1ed9i", "4": "C\u00f3 mitigation plan s\u1eb5n. \u0110i\u1ec1u ch\u1ec9nh nhanh, \u00edt gi\u00e1n \u0111o\u1ea1n", "3": "Plan B c\u01a1 b\u1ea3n. \u0110i\u1ec1u ch\u1ec9nh k\u1ecbp th\u1eddi nh\u01b0ng \u0111\u00f4i khi b\u1ecb \u0111\u1ed9ng", "2": "Thi\u1ebfu d\u1ef1 ph\u00f2ng. Ch\u1eefa ch\u00e1y", "1": "Ho\u1ea3ng lo\u1ea1n. \u0110\u1ed5 l\u1ed7i y\u1ebfu t\u1ed1 kh\u00e1ch quan"}}, {"id": 6, "text": "Ng\u01b0\u1eddi n\u00e0y qu\u1ea3n l\u00fd critical path (\u0111\u01b0\u1eddng g\u0103ng) v\u00e0 dependencies ra sao?", "levels": {"5": "T\u1ed1i \u01b0u critical path. Parallel processing t\u1ed1i \u0111a. Buffer \u0111\u00fang \u0111i\u1ec3m then ch\u1ed1t", "4": "Map r\u00f5 dependencies v\u00e0 critical path. Qu\u1ea3n l\u00fd proactive tr\u00e1nh delay domino", "3": "Nh\u1eadn di\u1ec7n dependencies ch\u00ednh. C\u1ed1 tr\u00e1nh bottleneck nh\u01b0ng ch\u01b0a h\u1ec7 th\u1ed1ng", "2": "Bi\u1ebft c\u00f3 dependencies nh\u01b0ng kh\u00f4ng qu\u1ea3n l\u00fd ch\u1eb7t. Hay \u0111\u1ee3i nhau", "1": "Kh\u00f4ng \u00fd th\u1ee9c dependencies. Bottleneck li\u00ean t\u1ee5c"}}, {"id": 7, "text": "C\u1ea5u tr\u00fac team v\u00e0 ph\u00e2n c\u00f4ng c\u00f3 r\u00f5 r\u00e0ng, kh\u00f4ng gaps/overlaps kh\u00f4ng?", "levels": {"5": "Thi\u1ebft k\u1ebf scalable. C\u00e2n b\u1eb1ng specialization & flexibility. RACI r\u00f5. Informal network t\u1ed1t", "4": "C\u1ea5u tr\u00fac logic theo value chain. Kh\u00f4ng gaps/overlaps. C\u01a1 ch\u1ebf handoff r\u00f5", "3": "Org chart v\u00e0 JD r\u00f5. M\u1ed7i ng\u01b0\u1eddi bi\u1ebft l\u00e0m g\u00ec. C\u00f2n gaps/overlaps nh\u1ecf", "2": "Ph\u00e2n c\u00f4ng theo function nh\u01b0ng ranh gi\u1edbi m\u01a1 h\u1ed3. Hay tranh ch\u1ea5p", "1": "L\u1ed9n x\u1ed9n. Nhi\u1ec1u ng\u01b0\u1eddi l\u00e0m c\u00f9ng vi\u1ec7c ho\u1eb7c kh\u00f4ng ai ch\u1ecbu tr\u00e1ch nhi\u1ec7m"}}, {"id": 8, "text": "Ng\u01b0\u1eddi n\u00e0y bi\u1ebft khi n\u00e0o c\u1ea7n th\u00eam headcount, khi n\u00e0o optimize ng\u01b0\u1eddi hi\u1ec7n t\u1ea1i?", "levels": {"5": "Org chart d\u00e0i h\u1ea1n (6-12 th\u00e1ng). Tuy\u1ec3n proactive theo roadmap. Scalable", "4": "Role m\u1edbi fit c\u1ea5u tr\u00fac t\u1ed5ng th\u1ec3. Bi\u1ebft khi n\u00e0o tuy\u1ec3n vs optimize", "3": "Ph\u00e2n t\u00edch workload, x\u00e1c \u0111\u1ecbnh role c\u1ea7n tuy\u1ec3n. Thi\u1ebft k\u1ebf ch\u01b0a t\u1ed1i \u01b0u", "2": "Bi\u1ebft thi\u1ebfu nh\u01b0ng kh\u00f4ng bi\u1ebft c\u1ea7n role g\u00ec. Tuy\u1ec3n theo feeling", "1": "Kh\u00f4ng bi\u1ebft khi n\u00e0o c\u1ea7n th\u00eam. Tuy\u1ec3n b\u1eeba ho\u1eb7c kh\u00f4ng tuy\u1ec3n"}}, {"id": 9, "text": "Ownership r\u00f5 r\u00e0ng kh\u00f4ng? ('Ai c\u0169ng b\u1eadn nh\u01b0ng kh\u00f4ng ai ch\u1ecbu tr\u00e1ch nhi\u1ec7m')", "levels": {"5": "V\u0103n h\u00f3a ownership m\u1ea1nh. Kh\u00f4ng c\u1ea7n h\u1ecfi, m\u1ecdi ng\u01b0\u1eddi t\u1ef1 bi\u1ebft v\u00e0 ch\u1ee7 \u0111\u1ed9ng", "4": "RACI r\u00f5. M\u1ed7i initiative c\u00f3 DRI (Directly Responsible Individual)", "3": "Ownership r\u00f5 t\u1eebng m\u1ea3ng. \u00cdt khi b\u1ecb 'v\u0103ng b\u00f3ng'", "2": "C\u00f3 ph\u00e2n c\u00f4ng nh\u01b0ng m\u01a1 h\u1ed3. Khi c\u00f3 v\u1ea5n \u0111\u1ec1 kh\u00f4ng r\u00f5 ai ch\u1ecbu tr\u00e1ch nhi\u1ec7m", "1": "Th\u01b0\u1eddng x\u1ea3y ra 'kh\u00f4ng ai ownership'"}}, {"id": 10, "text": "Team c\u00f3 quy tr\u00ecnh chu\u1ea9n kh\u00f4ng? Quy tr\u00ecnh v\u1eeba chu\u1ea9n v\u1eeba linh ho\u1ea1t?", "levels": {"5": "Process library \u0111\u1ea7y \u0111\u1ee7. T\u00edch h\u1ee3p automation. Governance r\u00f5. Standardized but adaptable", "4": "Quy tr\u00ecnh lean, b\u1ecf b\u01b0\u1edbc th\u1eeba. X\u1eed l\u00fd exception. Review \u0111\u1ecbnh k\u1ef3. C\u00f3 metrics", "3": "Quy tr\u00ecnh chu\u1ea9n cho vi\u1ec7c ch\u00ednh. Flowchart r\u00f5. Ng\u01b0\u1eddi m\u1edbi l\u00e0m theo \u0111\u01b0\u1ee3c. C\u00f2n c\u1ee9ng nh\u1eafc", "2": "V\u0103n b\u1ea3n l\u1ed9n x\u1ed9n, l\u1ed7i th\u1eddi, kh\u00f4ng ai follow. Vi\u1ebft v\u0103n xu\u00f4i kh\u00f3 hi\u1ec3u", "1": "Kh\u00f4ng c\u00f3 quy tr\u00ecnh. M\u1ed7i ng\u01b0\u1eddi m\u1ed9t ki\u1ec3u"}}, {"id": 11, "text": "Ng\u01b0\u1eddi m\u1edbi v\u00e0o team h\u1ecdc c\u00e1ch l\u00e0m vi\u1ec7c th\u1ebf n\u00e0o? Onboarding ra sao?", "levels": {"5": "Knowledge base \u0111\u1ea7y \u0111\u1ee7, d\u1ec5 search. Automation. Ng\u01b0\u1eddi m\u1edbi ramp-up c\u1ef1c nhanh", "4": "Onboarding c\u00f3 c\u1ea5u tr\u00fac, k\u1ebft h\u1ee3p training & docs. Ng\u01b0\u1eddi m\u1edbi productive nhanh", "3": "C\u00f3 onboarding v\u00e0 SOP. Ng\u01b0\u1eddi m\u1edbi t\u1ef1 l\u00e0m \u0111\u01b0\u1ee3c 80%", "2": "T\u00e0i li\u1ec7u l\u1ed7i th\u1eddi/kh\u00f4ng \u0111\u1ee7. Ng\u01b0\u1eddi m\u1edbi ph\u1ea3i h\u1ecfi nhi\u1ec1u", "1": "T\u1ef1 xoay, t\u1ef1 h\u1ecfi. Kh\u00f4ng c\u00f3 t\u00e0i li\u1ec7u"}}, {"id": 12, "text": "Quy tr\u00ecnh c\u00f3 \u0111\u01b0\u1ee3c c\u1ea3i ti\u1ebfn li\u00ean t\u1ee5c kh\u00f4ng?", "levels": {"5": "V\u0103n h\u00f3a continuous improvement. M\u1ecdi ng\u01b0\u1eddi ch\u1ee7 \u0111\u1ed9ng \u0111\u1ec1 xu\u1ea5t. A/B test quy tr\u00ecnh", "4": "Process improvement li\u00ean t\u1ee5c. Metrics before/after. Team \u0111\u00f3ng g\u00f3p \u00fd ki\u1ebfn", "3": "Review \u0111\u1ecbnh k\u1ef3 v\u00e0 update khi c\u1ea7n. Ch\u01b0a c\u00f3 metrics \u0111o improvement", "2": "C\u00f3 ng\u01b0\u1eddi ph\u00e0n n\u00e0n nh\u01b0ng kh\u00f4ng ai s\u1eeda", "1": "Kh\u00f4ng c\u1ea3i ti\u1ebfn. Quy tr\u00ecnh c\u0169 m\u00e8m"}}, {"id": 13, "text": "Ng\u01b0\u1eddi n\u00e0y bi\u1ebft team c\u1ea7n g\u00ec (budget, tools, headcount) v\u00e0 ch\u1ee7 \u0111\u1ed9ng xin kh\u00f4ng?", "levels": {"5": "H\u1ec7 th\u1ed1ng qu\u1ea3n tr\u1ecb t\u00e0i nguy\u00ean d\u00e0i h\u1ea1n (3-12 th\u00e1ng). D\u1ef1 \u0111o\u00e1n nhu c\u1ea7u tr\u01b0\u1edbc", "4": "L\u1eadp budget chi ti\u1ebft, ph\u00e2n b\u1ed5 t\u1ed1i \u01b0u. Track utilization. \u0110\u00e0m ph\u00e1n win-win", "3": "Bi\u1ebft team c\u1ea7n g\u00ec v\u00e0 ch\u1ee7 \u0111\u1ed9ng xin. C\u00f3 business case \u0111\u01a1n gi\u1ea3n. \u0110\u1ea3m b\u1ea3o 80% nhu c\u1ea7u", "2": "Bi\u1ebft thi\u1ebfu nh\u01b0ng kh\u00f4ng d\u00e1m/kh\u00f4ng bi\u1ebft xin. Ch\u1ea5p nh\u1eadn t\u00ecnh tr\u1ea1ng thi\u1ebfu", "1": "Kh\u00f4ng bi\u1ebft team thi\u1ebfu g\u00ec. Giao vi\u1ec7c nh\u01b0ng kh\u00f4ng cung c\u1ea5p c\u00f4ng c\u1ee5"}}, {"id": 14, "text": "Ngu\u1ed3n l\u1ef1c \u0111\u01b0\u1ee3c t\u1ed1i \u01b0u h\u00f3a kh\u00f4ng? (budget, tools ph\u00e2n b\u1ed5 h\u1ee3p l\u00fd)", "levels": {"5": "H\u1ec7 th\u1ed1ng qu\u1ea3n tr\u1ecb t\u00e0i nguy\u00ean t\u1ed1i \u01b0u. Shared resources hi\u1ec7u qu\u1ea3. Balance '\u0111\u1ee7' vs 'kh\u00f4ng l\u00e3ng ph\u00ed'", "4": "T\u1ed1i \u01b0u allocation d\u1ef1a priority & ROI. Shared resources hi\u1ec7u qu\u1ea3", "3": "Ph\u00e2n b\u1ed5 h\u1ee3p l\u00fd gi\u1eefa initiatives. Track utilization c\u01a1 b\u1ea3n", "2": "Bi\u1ebft c\u00f3 l\u00e3ng ph\u00ed nh\u01b0ng kh\u00f4ng bi\u1ebft c\u00e1ch t\u1ed1i \u01b0u. M\u1ed7i team m\u1ed9t tool ri\u00eang", "1": "L\u00e3ng ph\u00ed ho\u1eb7c thi\u1ebfu h\u1ee5t nghi\u00eam tr\u1ecdng. Kh\u00f4ng theo d\u00f5i \u0111\u01b0\u1ee3c utilization"}}, {"id": 15, "text": "Ng\u01b0\u1eddi n\u00e0y \u0111\u00e0m ph\u00e1n v\u1edbi CEO/COO v\u1ec1 t\u00e0i nguy\u00ean th\u1ebf n\u00e0o?", "levels": {"5": "Strategic influence. Align v\u1edbi strategy c\u00f4ng ty. T\u1ef7 l\u1ec7 th\u00e0nh c\u00f4ng r\u1ea5t cao", "4": "Business case ch\u1eb7t ch\u1ebd v\u1edbi data, ROI. Win-win negotiation", "3": "C\u00f3 business case c\u01a1 b\u1ea3n. Th\u00e0nh c\u00f4ng 60-70% s\u1ed1 l\u1ea7n xin", "2": "Xin nh\u01b0ng kh\u00f4ng c\u00f3 l\u00fd l\u1ebd thuy\u1ebft ph\u1ee5c. Th\u01b0\u1eddng b\u1ecb t\u1eeb ch\u1ed1i", "1": "Kh\u00f4ng d\u00e1m \u0111\u00e0m ph\u00e1n ho\u1eb7c ch\u1ec9 than phi\u1ec1n"}}, {"id": 16, "text": "Ng\u01b0\u1eddi n\u00e0y theo d\u00f5i ti\u1ebfn \u0111\u1ed9 v\u00e0 hi\u1ec7u su\u1ea5t team th\u1ebf n\u00e0o?", "levels": {"5": "H\u1ec7 th\u1ed1ng gi\u00e1m s\u00e1t t\u1ef1 \u0111\u1ed9ng, alert khi anomaly. Risk management proactive", "4": "Dashboard near real-time. C\u00f3 leading indicators ph\u00e1t hi\u1ec7n s\u1edbm r\u1ee7i ro. Risk register & mitigation plan", "3": "H\u1ec7 th\u1ed1ng b\u00e1o c\u00e1o \u0111\u1ecbnh k\u1ef3. Track KPIs ch\u00ednh. X\u1eed l\u00fd k\u1ecbp th\u1eddi khi ph\u00e1t hi\u1ec7n v\u1ea5n \u0111\u1ec1", "2": "H\u1ecfi han ad-hoc, kh\u00f4ng c\u00f3 h\u1ec7 th\u1ed1ng. B\u00e1o c\u00e1o thi\u1ebfu structure", "1": "Kh\u00f4ng bi\u1ebft team \u0111ang l\u00e0m g\u00ec. Ph\u00e1t hi\u1ec7n v\u1ea5n \u0111\u1ec1 khi \u0111\u00e3 mu\u1ed9n (crisis mode)"}}, {"id": 17, "text": "Ng\u01b0\u1eddi n\u00e0y ph\u00e1t hi\u1ec7n r\u1ee7i ro s\u1edbm (early warning) kh\u00f4ng?", "levels": {"5": "D\u1ef1 \u0111o\u00e1n r\u1ee7i ro tr\u01b0\u1edbc khi xu\u1ea5t hi\u1ec7n. Proactive prevention. Root cause analysis", "4": "Ph\u00e1t hi\u1ec7n s\u1edbm qua leading indicators. Mitigation tr\u01b0\u1edbc khi th\u00e0nh crisis", "3": "Ph\u00e1t hi\u1ec7n khi v\u1ea5n \u0111\u1ec1 v\u1eeba n\u1ea3y sinh. C\u00f3 action plan x\u1eed l\u00fd k\u1ecbp th\u1eddi", "2": "Ph\u00e1t hi\u1ec7n mu\u1ed9n. X\u1eed l\u00fd theo ki\u1ec3u 'ch\u1eefa ch\u00e1y'", "1": "Kh\u00f4ng ph\u00e1t hi\u1ec7n cho \u0111\u1ebfn khi th\u00e0nh v\u1ea5n \u0111\u1ec1 l\u1edbn. Reactive"}}, {"id": 18, "text": "Ng\u01b0\u1eddi n\u00e0y balance t\u1ed1t gi\u1eefa risk-taking (th\u1eed nghi\u1ec7m) v\u00e0 safety kh\u00f4ng?", "levels": {"5": "V\u0103n h\u00f3a continuous improvement. Encourage experiment, kh\u00f4ng penalty fail", "4": "Kh\u00f4ng penalty khi fail c\u00f3 h\u1ecdc. Celebrate 'intelligent failures'", "3": "Cho ph\u00e9p th\u1eed nghi\u1ec7m. Kh\u00f4ng penalty n\u1ebfu c\u00f3 n\u1ed7 l\u1ef1c ch\u00e2n th\u00e0nh", "2": "N\u00f3i khuy\u1ebfn kh\u00edch nh\u01b0ng v\u1eabn penalty khi fail. Nh\u00e2n vi\u00ean s\u1ee3 th\u1eed", "1": "Kh\u00f4ng cho ph\u00e9p sai. Culture s\u1ee3 h\u00e3i"}}, {"id": 19, "text": "Quy tr\u00ecnh tuy\u1ec3n d\u1ee5ng c\u1ee7a ng\u01b0\u1eddi n\u00e0y c\u00f3 chuy\u00ean nghi\u1ec7p kh\u00f4ng?", "levels": {"5": "Tuy\u1ec3n ng\u01b0\u1eddi gi\u1ecfi h\u01a1n m\u00ecnh. Pipeline d\u00e0i h\u1ea1n. Diverse team. Succession plan r\u00f5", "4": "C\u00f3 talent pipeline s\u1eb5n. D\u00f9ng assessment tools. Tuy\u1ec3n c\u1ea3 potential. Onboarding h\u1ec7 th\u1ed1ng", "3": "X\u00e1c \u0111\u1ecbnh r\u00f5 competency c\u1ea7n. JD r\u00f5, ph\u1ecfng v\u1ea5n c\u1ea5u tr\u00fac. \u0110\u00e1nh gi\u00e1 c\u1ea3 skills & culture fit. Retention >70%", "2": "C\u00f3 JD nh\u01b0ng copy m\u1eabu. Ph\u1ecfng v\u1ea5n kh\u00f4ng c\u1ea5u tr\u00fac. Tuy\u1ec3n \u0111\u01b0\u1ee3c ng\u01b0\u1eddi 'okay' nh\u01b0ng kh\u00f4ng fit", "1": "Tuy\u1ec3n b\u1eeba, kh\u00f4ng ch\u00e2n dung r\u00f5. Tuy\u1ec3n theo 'c\u1ea3m t\u00ednh'. Fail probation cao"}}, {"id": 20, "text": "Ch\u1ea5t l\u01b0\u1ee3ng team ng\u01b0\u1eddi n\u00e0y build ra sao?", "levels": {"5": "Team xu\u1ea5t s\u1eafc, t\u1ea1o synergy. Top talent mu\u1ed1n v\u00e0o. Alumni network m\u1ea1nh", "4": "Team m\u1ea1nh, nhi\u1ec1u high performer. Diverse v\u1ec1 skills & background. Low turnover", "3": "Team solid, \u0111a s\u1ed1 \u0111\u00e1p \u1ee9ng t\u1ed1t. C\u00f3 v\u00e0i ng\u01b0\u1eddi n\u1ed5i b\u1eadt", "2": "Team trung b\u00ecnh, \u1ed5n \u0111\u1ecbnh nh\u01b0ng kh\u00f4ng xu\u1ea5t s\u1eafc. \u00cdt ng\u01b0\u1eddi c\u00f3 potential cao", "1": "Team y\u1ebfu, nhi\u1ec1u ng\u01b0\u1eddi kh\u00f4ng \u0111\u00e1p \u1ee9ng. Turnover cao"}}, {"id": 21, "text": "Khi v\u1ecb tr\u00ed kh\u00f3 tuy\u1ec3n, ng\u01b0\u1eddi n\u00e0y l\u00e0m g\u00ec?", "levels": {"5": "Passive candidates t\u1ef1 t\u00ecm \u0111\u1ebfn. Referral m\u1ea1nh. Reputation l\u00e0 magnet", "4": "Build employer brand. C\u00f3 network trong industry. Attract \u0111\u01b0\u1ee3c top talent", "3": "Ch\u1ee7 \u0111\u1ed9ng headhunt. T\u1ea1o offer package h\u1ea5p d\u1eabn. Th\u00e0nh c\u00f4ng v\u1edbi effort cao", "2": "C\u1ed1 tuy\u1ec3n nh\u01b0ng kh\u00f4ng chi\u1ebfn l\u01b0\u1ee3c. D\u1ec5 b\u1ecb \u1ee9ng vi\u00ean t\u1eeb ch\u1ed1i offer", "1": "\u0110\u1ec3 tr\u1ed1ng v\u1ecb tr\u00ed l\u00e2u ho\u1eb7c tuy\u1ec3n ng\u01b0\u1eddi kh\u00f4ng \u0111\u1ee7 ti\u00eau chu\u1ea9n"}}, {"id": 22, "text": "Ng\u01b0\u1eddi n\u00e0y tuy\u1ec3n creative talents (t\u00f2 m\u00f2, h\u1ecdc h\u1ecfi) hay executional talents?", "levels": {"5": "Balance c\u1ea3 2. Tuy\u1ec3n diverse v\u1ec1 DNA, t\u1ea1o complementary team", "4": "Bi\u1ebft khi n\u00e0o c\u1ea7n c\u00e1i n\u00e0o. Adjust theo giai \u0111o\u1ea1n c\u00f4ng ty", "3": "C\u00f3 \u00fd th\u1ee9c c\u00e2n b\u1eb1ng. Ch\u01b0a strategic ho\u00e0n to\u00e0n", "2": "Ch\u1ee7 y\u1ebfu 1 lo\u1ea1i. Kh\u00f4ng c\u00e2n b\u1eb1ng \u0111\u01b0\u1ee3c", "1": "Kh\u00f4ng c\u00f3 strategy tuy\u1ec3n d\u1ee5ng"}}, {"id": 23, "text": "Ng\u01b0\u1eddi n\u00e0y coaching nh\u00e2n vi\u00ean th\u1ebf n\u00e0o?", "levels": {"5": "Coaching d\u00e0i h\u1ea1n: chu\u1ea9n b\u1ecb k\u1ebf nhi\u1ec7m. Ph\u00e1t tri\u1ec3n nh\u00e2n vi\u00ean th\u00e0nh leader. Learning culture", "4": "M\u1ed7i ng\u01b0\u1eddi c\u00f3 IDP. Coaching theo GROW model. Delegate \u0111\u1ec3 ph\u00e1t tri\u1ec3n, kh\u00f4ng micromanage", "3": "H\u01b0\u1edbng d\u1eabn r\u00f5 c\u1ea3 what & why. Feedback c\u1ee5 th\u1ec3 c\u00f3 v\u00ed d\u1ee5. 1-on-1 \u0111\u1ecbnh k\u1ef3", "2": "Ch\u1ec9 show m\u1ed9t l\u1ea7n kh\u00f4ng gi\u1ea3i th\u00edch why. Feedback ki\u1ec3u 'sai r\u1ed3i, l\u00e0m l\u1ea1i'", "1": "Kh\u00f4ng \u0111\u00e0o t\u1ea1o. Giao vi\u1ec7c xong b\u1ecf m\u1eb7c"}}, {"id": 24, "text": "Nh\u00e2n vi\u00ean trong team ph\u00e1t tri\u1ec3n skill/career ra sao?", "levels": {"5": "Team l\u00e0 'tr\u01b0\u1eddng \u0111\u1ea1i h\u1ecdc'. Ng\u01b0\u1eddi r\u1eddi \u0111i v\u1eabn th\u00e0nh c\u00f4ng. Alumni network m\u1ea1nh", "4": "Development c\u00f3 h\u1ec7 th\u1ed1ng. Nhi\u1ec1u ng\u01b0\u1eddi promote t\u1eeb trong. High performers grow nhanh", "3": "C\u00f3 training c\u01a1 b\u1ea3n. Nh\u00e2n vi\u00ean trung b\u00ecnh ph\u00e1t tri\u1ec3n \u0111\u1ec1u. 1-2 n\u0103m l\u00ean level", "2": "Ph\u00e1t tri\u1ec3n ch\u1eadm, ch\u1ee7 y\u1ebfu t\u1ef1 h\u1ecdc. Nhi\u1ec1u ng\u01b0\u1eddi stuck kh\u00f4ng th\u0103ng ti\u1ebfn", "1": "Kh\u00f4ng ph\u00e1t tri\u1ec3n. Turnover cao v\u00ec kh\u00f4ng \u0111\u01b0\u1ee3c \u0111\u00e0o t\u1ea1o"}}, {"id": 25, "text": "Khi nh\u00e2n vi\u00ean m\u1eafc l\u1ed7i, ng\u01b0\u1eddi n\u00e0y x\u1eed l\u00fd th\u1ebf n\u00e0o?", "levels": {"5": "V\u0103n h\u00f3a 'fail fast, learn faster'. L\u1ed7i l\u00e0 c\u01a1 h\u1ed9i h\u1ecdc. Post-mortem kh\u00f4ng blame", "4": "Coaching \u0111\u1ec3 t\u1ef1 nh\u1eadn ra l\u1ed7i & c\u00e1ch s\u1eeda. Root cause analysis. Bi\u1ebfn l\u1ed7i th\u00e0nh b\u00e0i h\u1ecdc", "3": "Feedback constructive: l\u1ed7i g\u00ec, impact, l\u00e0m th\u1ebf n\u00e0o \u0111\u00fang. T\u1ea1o env an to\u00e0n \u0111\u1ec3 \u0111\u01b0\u1ee3c ph\u00e9p sai", "2": "Ch\u1ec9 ra l\u1ed7i nh\u01b0ng kh\u00f4ng h\u01b0\u1edbng d\u1eabn. Nh\u00e2n vi\u00ean s\u1ee3 sai", "1": "M\u1eafng ho\u1eb7c l\u00e0m thay. Kh\u00f4ng gi\u1ea3i th\u00edch g\u00ec"}}, {"id": 26, "text": "Ng\u01b0\u1eddi n\u00e0y giao b\u00e0i t\u1eadp kh\u00f3 (ca ch\u01b0a c\u00f3 ti\u1ec1n l\u1ec7) \u0111\u1ec3 \u00e9p nh\u00e2n vi\u00ean b\u1ee9t ph\u00e1 kh\u00f4ng?", "levels": {"5": "Stretch assignment t\u00edch c\u1ef1c. C\u00e2n b\u1eb1ng challenge & support. Team grow nhanh", "4": "C\u00f3 strategy ph\u00e1t tri\u1ec3n. Giao c\u00f4ng vi\u1ec7c kh\u00f3 khi team ready", "3": "Th\u1ec9nh tho\u1ea3ng giao. Tuy nhi\u00ean support ch\u01b0a \u0111\u1ee7", "2": "\u00cdt giao. Team ch\u1ec9 l\u00e0m vi\u1ec7c routine", "1": "Kh\u00f4ng giao ho\u1eb7c giao m\u00e0 kh\u00f4ng support. Burnout"}}, {"id": 27, "text": "H\u1ec7 th\u1ed1ng \u0111\u00e1nh gi\u00e1 trong team c\u00f4ng b\u1eb1ng, r\u00f5 r\u00e0ng kh\u00f4ng?", "levels": {"5": "Talent review \u0111\u1ecbnh k\u1ef3: 9-box, succession planning. Meritocracy: th\u00e0nh t\u00edch n\u00f3i l\u00ean t\u1ea5t c\u1ea3", "4": "Continuous feedback, calibration session. Fairness \u0111\u1ea3m b\u1ea3o. Hi\u1ec3u motivation t\u1eebng ng\u01b0\u1eddi", "3": "\u0110\u00e1nh gi\u00e1 d\u1ef1a KPIs & competencies r\u00f5. Review \u0111\u1ecbnh k\u1ef3. Feedback c\u1ee5 th\u1ec3 c\u00f3 evidence", "2": "\u0110\u00e1nh gi\u00e1 m\u01a1 h\u1ed3. Kh\u00f4ng c\u00f3 data. Reward kh\u00f4ng c\u00f4ng b\u1eb1ng", "1": "Thi\u00ean v\u1ecb, \u0111\u00e1nh gi\u00e1 theo c\u1ea3m t\u00ednh. Kh\u00f4ng ti\u00eau ch\u00ed r\u00f5"}}, {"id": 28, "text": "Team c\u00f3 motivated v\u00e0 engaged kh\u00f4ng? Celebrate learning & effort?", "levels": {"5": "High-performance culture. Meritocracy. Nh\u00e2n vi\u00ean t\u1ef1 th\u00fac \u0111\u1ea9y nhau l\u00ean cao", "4": "Intrinsic motivation cao. L\u00e0m v\u00ec mission kh\u00f4ng ch\u1ec9 l\u01b0\u01a1ng. Psychological safety", "3": "Team c\u1ea3m th\u1ea5y \u0111\u01b0\u1ee3c tr\u00e2n tr\u1ecdng. Celebrate wins. Motivation ch\u1ee7 y\u1ebfu extrinsic", "2": "Team \u1ed5n \u0111\u1ecbnh nh\u01b0ng kh\u00f4ng excited. L\u00e0m \u0111\u1ee7 gi\u1edd l\u00e0 v\u1ec1", "1": "M\u00f4i tr\u01b0\u1eddng toxic. Team l\u00e0m qua loa, kh\u00f4ng passion. Turnover cao"}}, {"id": 29, "text": "Ng\u01b0\u1eddi n\u00e0y x\u1eed l\u00fd underperformer (ng\u01b0\u1eddi l\u00e0m k\u00e9m) th\u1ebf n\u00e0o?", "levels": {"5": "Ph\u00e1t hi\u1ec7n s\u1edbm. Coaching intensive. N\u1ebfu kh\u00f4ng c\u1ea3i thi\u1ec7n \u2192 decisive action. High bar \u0111\u01b0\u1ee3c maintain", "4": "Coach intensively. N\u1ebfu kh\u00f4ng c\u1ea3i thi\u1ec7n \u2192 move role ho\u1eb7c part ways. Compassionate but firm", "3": "Feedback r\u00f5 r\u00e0ng, cho c\u01a1 h\u1ed9i. PIP n\u1ebfu c\u1ea7n", "2": "Bi\u1ebft c\u00f3 v\u1ea5n \u0111\u1ec1 nh\u01b0ng kh\u00f4ng d\u00e1m confrontation. \u0110\u1ec3 l\u00ea th\u00ea", "1": "\u0110\u1ec3 y\u00ean ho\u1eb7c \u0111\u1ed5 l\u1ed7i cho nh\u00e2n vi\u00ean. Kh\u00f4ng coaching"}}, {"id": 30, "text": "Ng\u01b0\u1eddi n\u00e0y khuy\u1ebfn kh\u00edch th\u1eed nghi\u1ec7m/innovation kh\u00f4ng? C\u00f3 penalty khi fail?", "levels": {"5": "Reward c\u1ea3 successful experiment & failed-but-learned. Innovation l\u00e0 expectation", "4": "Kh\u00f4ng penalty khi fail c\u00f3 h\u1ecdc. Celebrate 'intelligent failures'", "3": "Cho ph\u00e9p th\u1eed nghi\u1ec7m. Kh\u00f4ng penalty n\u1ebfu c\u00f3 n\u1ed7 l\u1ef1c ch\u00e2n th\u00e0nh", "2": "N\u00f3i khuy\u1ebfn kh\u00edch nh\u01b0ng v\u1eabn penalty khi fail. Nh\u00e2n vi\u00ean s\u1ee3 th\u1eed", "1": "Kh\u00f4ng cho ph\u00e9p sai. Culture s\u1ee3 h\u00e3i"}}, {"id": 31, "text": "Giao vi\u1ec7c c\u1ee7a ng\u01b0\u1eddi n\u00e0y r\u00f5 r\u00e0ng kh\u00f4ng? (5W1H: what, why, who, when, where, how)", "levels": {"5": "Executive presence: n\u00f3i \u00edt nh\u01b0ng impactful. Storytelling: bi\u1ebfn data th\u00e0nh narrative. Writing thuy\u1ebft ph\u1ee5c", "4": "Concise but complete. Framework. Active listening. Tailor theo audience", "3": "Giao vi\u1ec7c theo 5W1H. Tr\u00ecnh b\u00e0y c\u1ea5u tr\u00fac. Email subject r\u00f5. Meeting c\u00f3 agenda", "2": "C\u00f3 what nh\u01b0ng thi\u1ebfu why, when, how. D\u00e0i d\u00f2ng. Hay hi\u1ec3u l\u1ea7m", "1": "Giao vi\u1ec7c kh\u00f4ng r\u00f5. Th\u00f4ng tin r\u1ea3i r\u00e1c. Kh\u00f4ng ph\u1ea3n h\u1ed3i ho\u1eb7c mu\u1ed9n"}}, {"id": 32, "text": "Meetings c\u1ee7a ng\u01b0\u1eddi n\u00e0y hi\u1ec7u qu\u1ea3 kh\u00f4ng?", "levels": {"5": "Ch\u1ec9 h\u1ecdp khi c\u1ea7n. Async t\u1ed1i \u0111a. Meetings \u0111\u1ec3 decide, kh\u00f4ng ph\u1ea3i inform", "4": "Hi\u1ec7u qu\u1ea3: \u0111\u00fang ng\u01b0\u1eddi, \u0111\u00fang n\u1ed9i dung, \u0111\u00fang th\u1eddi l\u01b0\u1ee3ng. Pre-read. Decision log r\u00f5", "3": "C\u00f3 agenda. \u0110\u00fang gi\u1edd, \u0111\u00fang topic. Meeting notes & action items ghi nh\u1eadn", "2": "C\u00f3 h\u1ecdp nh\u01b0ng thi\u1ebfu chu\u1ea9n b\u1ecb. Th\u1ea3o lu\u1eadn kh\u00f4ng t\u1eadp trung. Action items kh\u00f4ng r\u00f5", "1": "H\u1ecdp lan man kh\u00f4ng k\u1ebft lu\u1eadn. Kh\u00f4ng agenda/notes. L\u00e3ng ph\u00ed th\u1eddi gian"}}, {"id": 33, "text": "Khi c\u00f3 conflict/difficult conversation, ng\u01b0\u1eddi n\u00e0y x\u1eed l\u00fd th\u1ebf n\u00e0o?", "levels": {"5": "Turn conflict th\u00e0nh c\u01a1 h\u1ed9i. Facilitation \u0111\u1ec3 team t\u1ef1 resolve. Political savvy", "4": "Difficult conversations m\u00e0 gi\u1eef \u0111\u01b0\u1ee3c quan h\u1ec7. Conflict resolution hi\u1ec7u qu\u1ea3. Win-win", "3": "Confront tr\u1ef1c ti\u1ebfp nh\u01b0ng respectful. Focus v\u1ea5n \u0111\u1ec1 kh\u00f4ng ph\u1ea3i c\u00e1 nh\u00e2n. Ch\u01b0a skilled", "2": "Bi\u1ebft c\u00f3 v\u1ea5n \u0111\u1ec1 nh\u01b0ng kh\u00f4ng d\u00e1m confront. K\u00e9o d\u00e0i", "1": "Tr\u00e1nh n\u00e9 ho\u1eb7c c\u1ea3m t\u00ednh. Conflict leo thang"}}, {"id": 34, "text": "Team c\u00f3 tin v\u00e0 follow ng\u01b0\u1eddi n\u00e0y kh\u00f4ng? T\u1ea1i sao?", "levels": {"5": "Transformational: thay \u0111\u1ed5i mindset kh\u00f4ng ch\u1ec9 behavior. T\u1ea1o movement: \u0111\u1ed9i t\u1ef1 lan t\u1ecfa vision", "4": "Connect c\u00f4ng vi\u1ec7c v\u1edbi purpose. Inspire b\u1eb1ng h\u00e0nh \u0111\u1ed9ng. Intrinsic motivation", "3": "Vision r\u00f5 & truy\u1ec1n \u0111\u1ea1t \u0111\u01b0\u1ee3c. Celebrate wins. Team c\u1ea3m th\u1ea5y tr\u00e2n tr\u1ecdng. Motivation extrinsic", "2": "\u0110\u1ed9ng vi\u00ean h\u1eddi h\u1ee3t. Kh\u00f4ng vision. Team kh\u00f4ng tin", "1": "Kh\u00f4ng \u1ea3nh h\u01b0\u1edfng. Team l\u00e0m theo l\u1ec7nh, kh\u00f4ng passion. Turnover cao"}}, {"id": 35, "text": "Trong crisis/pressure cao, ng\u01b0\u1eddi n\u00e0y d\u1eabn d\u1eaft team ra sao?", "levels": {"5": "Best moments trong crisis: unite team, \u0111\u1ed9t ph\u00e1. Team s\u1eb5n s\u00e0ng hy sinh ng\u1eafn h\u1ea1n v\u00ec d\u00e0i h\u1ea1n", "4": "D\u1eabn v\u1edbi clarity & calmness. Turn adversity th\u00e0nh rallying point", "3": "B\u00ecnh t\u0129nh, c\u00f3 plan. Truy\u1ec1n t\u1ef1 tin cho team. V\u01b0\u1ee3t kh\u00f3 kh\u0103n", "2": "C\u1ed1 gi\u1eef tinh th\u1ea7n nh\u01b0ng kh\u00f4ng action c\u1ee5 th\u1ec3. Kh\u1ea9u hi\u1ec7u r\u1ed7ng", "1": "Ho\u1ea3ng lo\u1ea1n ho\u1eb7c im l\u1eb7ng. Team m\u1ea5t ph\u01b0\u01a1ng h\u01b0\u1edbng"}}, {"id": 36, "text": "Ng\u01b0\u1eddi n\u00e0y 'walk the talk' (h\u00e0nh \u0111\u1ed9ng nh\u1ea5t qu\u00e1n v\u1edbi l\u1eddi n\u00f3i)?", "levels": {"5": "Authentic leadership: values r\u00f5, kh\u00f4ng x\u00ea d\u1ecbch. Legacy: \u1ea3nh h\u01b0\u1edfng l\u00e2u d\u00e0i sau khi r\u1eddi", "4": "Role model: l\u00e0m tr\u01b0\u1edbc khi y\u00eau c\u1ea7u. Lead by example m\u1ecdi t\u00ecnh hu\u1ed1ng", "3": "H\u00e0nh \u0111\u1ed9ng ph\u00f9 h\u1ee3p l\u1eddi n\u00f3i. C\u00f3 th\u1ec3 tin \u0111\u01b0\u1ee3c", "2": "C\u00f3 l\u00fac nh\u1ea5t qu\u00e1n, c\u00f3 l\u00fac kh\u00f4ng. Credibility kh\u00f4ng v\u1eefng", "1": "N\u00f3i m\u1ed9t \u0111\u1eb1ng l\u00e0m m\u1ed9t n\u1ebbo. M\u1ea5t uy t\u00edn"}}, {"id": 37, "text": "Ng\u01b0\u1eddi n\u00e0y khi\u1ebfn team tin v\u00e0o s\u1ea3n ph\u1ea9m/vision m\u1edbi c\u1ee7a PATI kh\u00f4ng?", "levels": {"5": "Team tr\u1edf th\u00e0nh evangelist, t\u1ef1 lan t\u1ecfa vision. Passionate v\u1ec1 product", "4": "Team excited v\u1ec1 roadmap. T\u1ef1 nguy\u1ec7n contribute \u00fd t\u01b0\u1edfng", "3": "Team hi\u1ec3u & support vision. L\u00e0m theo nh\u01b0ng ch\u01b0a passionate", "2": "Team l\u00e0m v\u00ec \u0111\u01b0\u1ee3c giao, kh\u00f4ng tin v\u00e0o vision", "1": "Team ho\u00e0i nghi ho\u1eb7c kh\u00f4ng quan t\u00e2m"}}, {"id": 38, "text": "Tr\u00ecnh \u0111\u1ed9 chuy\u00ean m\u00f4n c\u1ee7a ng\u01b0\u1eddi n\u00e0y trong l\u0129nh v\u1ef1c qu\u1ea3n l\u00fd?", "levels": {"5": "Thought leader \u0111\u01b0\u1ee3c industry c\u00f4ng nh\u1eadn. \u0110\u1ecbnh h\u00ecnh trend. R&D li\u00ean t\u1ee5c. Mentor c\u1ea3 industry", "4": "Top 10% trong m\u1ea3ng. Gi\u1ea3i m\u1ecdi ca kh\u00f3. Ch\u1ee7 \u0111\u1ed9ng h\u1ecdc. \u0110\u01b0a innovation v\u00e0o team", "3": "Chuy\u00ean gia v\u1eefng, \u0111\u01b0\u1ee3c respect. Gi\u1ea3i 80% ca kh\u00f3. \u0110\u00e0o t\u1ea1o \u0111\u01b0\u1ee3c nh\u00e2n vi\u00ean", "2": "Trung b\u00ecnh. Gi\u1ea3i vi\u1ec7c th\u01b0\u1eddng ng\u00e0y, b\u00f3 tay ca kh\u00f3", "1": "Y\u1ebfu. Kh\u00f4ng gi\u1ea3i quy\u1ebft \u0111\u01b0\u1ee3c, ph\u1ea3i nh\u1edd nh\u00e2n vi\u00ean. M\u1ea5t uy t\u00edn"}}, {"id": 39, "text": "Ng\u01b0\u1eddi n\u00e0y c\u1eadp nh\u1eadt ki\u1ebfn th\u1ee9c v\u00e0 xu h\u01b0\u1edbng m\u1edbi th\u1ebf n\u00e0o?", "levels": {"5": "Contribute v\u00e0o industry: speaking, writing, research. Network top experts global. Build IP cho PATI", "4": "Ch\u1ee7 \u0111\u1ed9ng h\u1ecdc: conference, research. Lu\u00f4n bi\u1ebft trend m\u1edbi. Apply v\u00e0o vi\u1ec7c", "3": "\u0110\u1ecdc s\u00e1ch, theo tin ng\u00e0nh. Update \u0111\u1ec1u nh\u01b0ng ch\u01b0a deep dive", "2": "H\u1ecdc l\u1ecfng l\u1ebbo, kh\u00f4ng system. Theo k\u1ecbp kh\u00f3", "1": "Kh\u00f4ng h\u1ecdc. Ki\u1ebfn th\u1ee9c l\u1ed7i th\u1eddi"}}, {"id": 40, "text": "Ng\u01b0\u1eddi n\u00e0y \u0111\u01b0a innovation/best practices v\u00e0o team th\u1ebf n\u00e0o?", "levels": {"5": "T\u1ea1o best practices m\u1edbi cho industry. Team l\u00e0 benchmark. Publish case studies", "4": "Ch\u1ee7 \u0111\u1ed9ng \u0111\u1ed5i m\u1edbi. Pilot test r\u1ed3i scale. Team d\u00f9ng cutting-edge practices", "3": "Th\u1eed nghi\u1ec7m best practices t\u1eeb ngo\u00e0i. \u00c1p d\u1ee5ng khi ph\u00f9 h\u1ee3p", "2": "Nghe nh\u01b0ng kh\u00f4ng apply. S\u1ee3 thay \u0111\u1ed5i", "1": "Kh\u00f4ng innovation. L\u00e0m theo c\u00e1ch c\u0169"}}, {"id": 41, "text": "Ng\u01b0\u1eddi n\u00e0y nghi\u00ean c\u1ee9u th\u1ecb tr\u01b0\u1eddng, nh\u1eadn di\u1ec7n trend m\u1edbi (trend sensing) ra sao?", "levels": {"5": "First mover: nh\u1eadn di\u1ec7n trend tr\u01b0\u1edbc market. \u0110\u1ecbnh h\u00ecnh h\u01b0\u1edbng \u0111i cho industry", "4": "Ra ngo\u00e0i th\u1ecb tr\u01b0\u1eddng th\u01b0\u1eddng xuy\u00ean. Nh\u1eadn di\u1ec7n trend s\u1edbm. Chuy\u1ec3n h\u00f3a th\u00e0nh s\u00e1ng ki\u1ebfn c\u1ee5 th\u1ec3", "3": "Theo d\u00f5i trend c\u01a1 b\u1ea3n. Bi\u1ebft trend khi \u0111\u00e3 r\u00f5 r\u00e0ng", "2": "\u00cdt theo d\u00f5i. Bi\u1ebft trend khi \u0111\u00e3 late", "1": "Kh\u00f4ng follow trend. B\u1ecb \u0111\u1ed9ng"}}];
+        const QUESTIONS = [
+            {"id":1,"text":"Khi nhận mục tiêu chiến lược từ CEO, người này xử lý như thế nào?","levels":{"5":"Xây dựng hệ thống mục tiêu cascade xuống từng cá nhân. Dự đoán bottleneck. Có thể challenge lại nếu bất hợp lý","4":"Bóc tách dựa data, baseline. Cân đối quality vs speed. Có leading & lagging indicators","3":"Bóc tách thành sub-goals SMART. Phân biệt outcome vs output. Cần hỗ trợ khi tính trade-off","2":"Copy-paste mục tiêu cấp trên (CEO nói 20% → đặt 20% cho mọi team)","1":"Không hiểu hoặc đặt mục tiêu mơ hồ ('làm tốt hơn', 'cải thiện chất lượng')"}},
+            {"id":2,"text":"Mục tiêu người này đặt có aggressive nhưng achievable không?","levels":{"5":"Aggressive nhưng achievable. Thúc đẩy đột phá không gây burnout. Có cơ chế review điều chỉnh","4":"Challenging nhưng realistic. Cân bằng các mục tiêu đối trọng (cost vs quality)","3":"SMART, phù hợp ngữ cảnh. Outcome và output tách bạch","2":"Có số liệu nhưng thiếu logic. Sao chép máy móc","1":"Mơ hồ, không đo được. Không phân biệt outcome/output"}},
+            {"id":3,"text":"Khi có nhiều mục tiêu cạnh tranh (quality vs speed, cost vs innovation), người này cân bằng ra sao?","levels":{"5":"Framework cân bằng đa mục tiêu. Dự đoán hệ quả từng scenario. Tối ưu portfolio","4":"Cân đối tốt dựa data và chiến lược. Rationale rõ ràng cho mỗi quyết định","3":"Nhận diện trade-off, đưa phương án nhưng cần support để quyết định","2":"Biết conflict nhưng không cân bằng được. Đợi cấp trên quyết định","1":"Không nhận ra conflict. Cố đạt tất cả không ưu tiên"}},
+            {"id":4,"text":"Kế hoạch công việc của người này có milestone, dependency, plan B không?","levels":{"5":"Đa phương án (best/worst/likely). Tích hợp đa phòng ban, synergy. Agile nhưng focused","4":"Có priority, dependency, critical path. Plan B. Tracking điều chỉnh đều","3":"Milestone, phân công, deadline rõ. Chưa tính dependency và buffer","2":"Chung chung ('Q2 marketing', 'tháng 5 tuyển người'). Thiếu breakdown","1":"Không có kế hoạch rõ. Làm theo cảm tính từng ngày"}},
+            {"id":5,"text":"Khi dự án delay/phát sinh vấn đề, người này phản ứng thế nào?","levels":{"5":"Dự đoán rủi ro trước. Nhiều phương án dự phòng. Biến khủng hoảng thành cơ hội","4":"Có mitigation plan sẵn. Điều chỉnh nhanh, ít gián đoạn","3":"Plan B cơ bản. Điều chỉnh kịp thời nhưng đôi khi bị động","2":"Thiếu dự phòng. Chữa cháy","1":"Hoảng loạn. Đổ lỗi yếu tố khách quan"}},
+            {"id":6,"text":"Người này quản lý critical path (đường găng) và dependencies ra sao?","levels":{"5":"Tối ưu critical path. Parallel processing tối đa. Buffer đúng điểm then chốt","4":"Map rõ dependencies và critical path. Quản lý proactive tránh delay domino","3":"Nhận diện dependencies chính. Cố tránh bottleneck nhưng chưa hệ thống","2":"Biết có dependencies nhưng không quản lý chặt. Hay đợi nhau","1":"Không ý thức dependencies. Bottleneck liên tục"}},
+            {"id":7,"text":"Cấu trúc team và phân công có rõ ràng, không gaps/overlaps không?","levels":{"5":"Thiết kế scalable. Cân bằng specialization & flexibility. RACI rõ. Informal network tốt","4":"Cấu trúc logic theo value chain. Không gaps/overlaps. Cơ chế handoff rõ","3":"Org chart và JD rõ. Mỗi người biết làm gì. Còn gaps/overlaps nhỏ","2":"Phân công theo function nhưng ranh giới mơ hồ. Hay tranh chấp","1":"Lộn xộn. Nhiều người làm cùng việc hoặc không ai chịu trách nhiệm"}},
+            {"id":8,"text":"Người này biết khi nào cần thêm headcount, khi nào optimize người hiện tại?","levels":{"5":"Org chart dài hạn (6-12 tháng). Tuyển proactive theo roadmap. Scalable","4":"Role mới fit cấu trúc tổng thể. Biết khi nào tuyển vs optimize","3":"Phân tích workload, xác định role cần tuyển. Thiết kế chưa tối ưu","2":"Biết thiếu nhưng không biết cần role gì. Tuyển theo feeling","1":"Không biết khi nào cần thêm. Tuyển bừa hoặc không tuyển"}},
+            {"id":9,"text":"Ownership rõ ràng không? ('Ai cũng bận nhưng không ai chịu trách nhiệm')","levels":{"5":"Văn hóa ownership mạnh. Không cần hỏi, mọi người tự biết và chủ động","4":"RACI rõ. Mỗi initiative có DRI (Directly Responsible Individual)","3":"Ownership rõ từng mảng. Ít khi bị 'văng bóng'","2":"Có phân công nhưng mơ hồ. Khi có vấn đề không rõ ai chịu trách nhiệm","1":"Thường xảy ra 'không ai ownership'"}},
+            {"id":10,"text":"Team có quy trình chuẩn không? Quy trình vừa chuẩn vừa linh hoạt?","levels":{"5":"Process library đầy đủ. Tích hợp automation. Governance rõ. Standardized but adaptable","4":"Quy trình lean, bỏ bước thừa. Xử lý exception. Review định kỳ. Có metrics","3":"Quy trình chuẩn cho việc chính. Flowchart rõ. Người mới làm theo được. Còn cứng nhắc","2":"Văn bản lộn xộn, lỗi thời, không ai follow. Viết văn xuôi khó hiểu","1":"Không có quy trình. Mỗi người một kiểu"}},
+            {"id":11,"text":"Người mới vào team học cách làm việc thế nào? Onboarding ra sao?","levels":{"5":"Knowledge base đầy đủ, dễ search. Automation. Người mới ramp-up cực nhanh","4":"Onboarding có cấu trúc, kết hợp training & docs. Người mới productive nhanh","3":"Có onboarding và SOP. Người mới tự làm được 80%","2":"Tài liệu lỗi thời/không đủ. Người mới phải hỏi nhiều","1":"Tự xoay, tự hỏi. Không có tài liệu"}},
+            {"id":12,"text":"Quy trình có được cải tiến liên tục không?","levels":{"5":"Văn hóa continuous improvement. Mọi người chủ động đề xuất. A/B test quy trình","4":"Process improvement liên tục. Metrics before/after. Team đóng góp ý kiến","3":"Review định kỳ và update khi cần. Chưa có metrics đo improvement","2":"Có người phàn nàn nhưng không ai sửa","1":"Không cải tiến. Quy trình cũ mèm"}},
+            {"id":13,"text":"Người này biết team cần gì (budget, tools, headcount) và chủ động xin không?","levels":{"5":"Hệ thống quản trị tài nguyên dài hạn (3-12 tháng). Dự đoán nhu cầu trước","4":"Lập budget chi tiết, phân bổ tối ưu. Track utilization. Đàm phán win-win","3":"Biết team cần gì và chủ động xin. Có business case đơn giản. Đảm bảo 80% nhu cầu","2":"Biết thiếu nhưng không dám/không biết xin. Chấp nhận tình trạng thiếu","1":"Không biết team thiếu gì. Giao việc nhưng không cung cấp công cụ"}},
+            {"id":14,"text":"Nguồn lực được tối ưu hóa không? (budget, tools phân bổ hợp lý)","levels":{"5":"Hệ thống quản trị tài nguyên tối ưu. Shared resources hiệu quả. Balance 'đủ' vs 'không lãng phí'","4":"Tối ưu allocation dựa priority & ROI. Shared resources hiệu quả","3":"Phân bổ hợp lý giữa initiatives. Track utilization cơ bản","2":"Biết có lãng phí nhưng không biết cách tối ưu. Mỗi team một tool riêng","1":"Lãng phí hoặc thiếu hụt nghiêm trọng. Không theo dõi được utilization"}},
+            {"id":15,"text":"Người này đàm phán với CEO/COO về tài nguyên thế nào?","levels":{"5":"Strategic influence. Align với strategy công ty. Tỷ lệ thành công rất cao","4":"Business case chặt chẽ với data, ROI. Win-win negotiation","3":"Có business case cơ bản. Thành công 60-70% số lần xin","2":"Xin nhưng không có lý lẽ thuyết phục. Thường bị từ chối","1":"Không dám đàm phán hoặc chỉ than phiền"}},
+            {"id":16,"text":"Người này theo dõi tiến độ và hiệu suất team thế nào?","levels":{"5":"Hệ thống giám sát tự động, alert khi anomaly. Risk management proactive","4":"Dashboard near real-time. Có leading indicators phát hiện sớm rủi ro. Risk register & mitigation plan","3":"Hệ thống báo cáo định kỳ. Track KPIs chính. Xử lý kịp thời khi phát hiện vấn đề","2":"Hỏi han ad-hoc, không có hệ thống. Báo cáo thiếu structure","1":"Không biết team đang làm gì. Phát hiện vấn đề khi đã muộn (crisis mode)"}},
+            {"id":17,"text":"Người này phát hiện rủi ro sớm (early warning) không?","levels":{"5":"Dự đoán rủi ro trước khi xuất hiện. Proactive prevention. Root cause analysis","4":"Phát hiện sớm qua leading indicators. Mitigation trước khi thành crisis","3":"Phát hiện khi vấn đề vừa nảy sinh. Có action plan xử lý kịp thời","2":"Phát hiện muộn. Xử lý theo kiểu 'chữa cháy'","1":"Không phát hiện cho đến khi thành vấn đề lớn. Reactive"}},
+            {"id":18,"text":"Người này balance tốt giữa risk-taking (thử nghiệm) và safety không?","levels":{"5":"Văn hóa continuous improvement. Encourage experiment, không penalty fail","4":"Không penalty khi fail có học. Celebrate 'intelligent failures'","3":"Cho phép thử nghiệm. Không penalty nếu có nỗ lực chân thành","2":"Nói khuyến khích nhưng vẫn penalty khi fail. Nhân viên sợ thử","1":"Không cho phép sai. Culture sợ hãi"}},
+            {"id":19,"text":"Quy trình tuyển dụng của người này có chuyên nghiệp không?","levels":{"5":"Tuyển người giỏi hơn mình. Pipeline dài hạn. Diverse team. Succession plan rõ","4":"Có talent pipeline sẵn. Dùng assessment tools. Tuyển cả potential. Onboarding hệ thống","3":"Xác định rõ competency cần. JD rõ, phỏng vấn cấu trúc. Đánh giá cả skills & culture fit. Retention >70%","2":"Có JD nhưng copy mẫu. Phỏng vấn không cấu trúc. Tuyển được người 'okay' nhưng không fit","1":"Tuyển bừa, không chân dung rõ. Tuyển theo 'cảm tính'. Fail probation cao"}},
+            {"id":20,"text":"Chất lượng team người này build ra sao?","levels":{"5":"Team xuất sắc, tạo synergy. Top talent muốn vào. Alumni network mạnh","4":"Team mạnh, nhiều high performer. Diverse về skills & background. Low turnover","3":"Team solid, đa số đáp ứng tốt. Có vài người nổi bật","2":"Team trung bình, ổn định nhưng không xuất sắc. Ít người có potential cao","1":"Team yếu, nhiều người không đáp ứng. Turnover cao"}},
+            {"id":21,"text":"Khi vị trí khó tuyển, người này làm gì?","levels":{"5":"Passive candidates tự tìm đến. Referral mạnh. Reputation là magnet","4":"Build employer brand. Có network trong industry. Attract được top talent","3":"Chủ động headhunt. Tạo offer package hấp dẫn. Thành công với effort cao","2":"Cố tuyển nhưng không chiến lược. Dễ bị ứng viên từ chối offer","1":"Để trống vị trí lâu hoặc tuyển người không đủ tiêu chuẩn"}},
+            {"id":22,"text":"Người này tuyển creative talents (tò mò, học hỏi) hay executional talents?","levels":{"5":"Balance cả 2. Tuyển diverse về DNA, tạo complementary team","4":"Biết khi nào cần cái nào. Adjust theo giai đoạn công ty","3":"Có ý thức cân bằng. Chưa strategic hoàn toàn","2":"Chủ yếu 1 loại. Không cân bằng được","1":"Không có strategy tuyển dụng"}},
+            {"id":23,"text":"Người này coaching nhân viên thế nào?","levels":{"5":"Coaching dài hạn: chuẩn bị kế nhiệm. Phát triển nhân viên thành leader. Learning culture","4":"Mỗi người có IDP. Coaching theo GROW model. Delegate để phát triển, không micromanage","3":"Hướng dẫn rõ cả what & why. Feedback cụ thể có ví dụ. 1-on-1 định kỳ","2":"Chỉ show một lần không giải thích why. Feedback kiểu 'sai rồi, làm lại'","1":"Không đào tạo. Giao việc xong bỏ mặc"}},
+            {"id":24,"text":"Nhân viên trong team phát triển skill/career ra sao?","levels":{"5":"Team là 'trường đại học'. Người rời đi vẫn thành công. Alumni network mạnh","4":"Development có hệ thống. Nhiều người promote từ trong. High performers grow nhanh","3":"Có training cơ bản. Nhân viên trung bình phát triển đều. 1-2 năm lên level","2":"Phát triển chậm, chủ yếu tự học. Nhiều người stuck không thăng tiến","1":"Không phát triển. Turnover cao vì không được đào tạo"}},
+            {"id":25,"text":"Khi nhân viên mắc lỗi, người này xử lý thế nào?","levels":{"5":"Văn hóa 'fail fast, learn faster'. Lỗi là cơ hội học. Post-mortem không blame","4":"Coaching để tự nhận ra lỗi & cách sửa. Root cause analysis. Biến lỗi thành bài học","3":"Feedback constructive: lỗi gì, impact, làm thế nào đúng. Tạo env an toàn để được phép sai","2":"Chỉ ra lỗi nhưng không hướng dẫn. Nhân viên sợ sai","1":"Mắng hoặc làm thay. Không giải thích gì"}},
+            {"id":26,"text":"Người này giao bài tập khó (ca chưa có tiền lệ) để ép nhân viên bứt phá không?","levels":{"5":"Stretch assignment tích cực. Cân bằng challenge & support. Team grow nhanh","4":"Có strategy phát triển. Giao công việc khó khi team ready","3":"Thỉnh thoảng giao. Tuy nhiên support chưa đủ","2":"Ít giao. Team chỉ làm việc routine","1":"Không giao hoặc giao mà không support. Burnout"}},
+            {"id":27,"text":"Hệ thống đánh giá trong team công bằng, rõ ràng không?","levels":{"5":"Talent review định kỳ: 9-box, succession planning. Meritocracy: thành tích nói lên tất cả","4":"Continuous feedback, calibration session. Fairness đảm bảo. Hiểu motivation từng người","3":"Đánh giá dựa KPIs & competencies rõ. Review định kỳ. Feedback cụ thể có evidence","2":"Đánh giá mơ hồ. Không có data. Reward không công bằng","1":"Thiên vị, đánh giá theo cảm tính. Không tiêu chí rõ"}},
+            {"id":28,"text":"Team có motivated và engaged không? Celebrate learning & effort?","levels":{"5":"High-performance culture. Meritocracy. Nhân viên tự thúc đẩy nhau lên cao","4":"Intrinsic motivation cao. Làm vì mission không chỉ lương. Psychological safety","3":"Team cảm thấy được trân trọng. Celebrate wins. Motivation chủ yếu extrinsic","2":"Team ổn định nhưng không excited. Làm đủ giờ là về","1":"Môi trường toxic. Team làm qua loa, không passion. Turnover cao"}},
+            {"id":29,"text":"Người này xử lý underperformer (người làm kém) thế nào?","levels":{"5":"Phát hiện sớm. Coaching intensive. Nếu không cải thiện → decisive action. High bar được maintain","4":"Coach intensively. Nếu không cải thiện → move role hoặc part ways. Compassionate but firm","3":"Feedback rõ ràng, cho cơ hội. PIP nếu cần","2":"Biết có vấn đề nhưng không dám confrontation. Để lê thê","1":"Để yên hoặc đổ lỗi cho nhân viên. Không coaching"}},
+            {"id":30,"text":"Người này khuyến khích thử nghiệm/innovation không? Có penalty khi fail?","levels":{"5":"Reward cả successful experiment & failed-but-learned. Innovation là expectation","4":"Không penalty khi fail có học. Celebrate 'intelligent failures'","3":"Cho phép thử nghiệm. Không penalty nếu có nỗ lực chân thành","2":"Nói khuyến khích nhưng vẫn penalty khi fail. Nhân viên sợ thử","1":"Không cho phép sai. Culture sợ hãi"}},
+            {"id":31,"text":"Giao việc của người này rõ ràng không? (5W1H: what, why, who, when, where, how)","levels":{"5":"Executive presence: nói ít nhưng impactful. Storytelling: biến data thành narrative. Writing thuyết phục","4":"Concise but complete. Framework. Active listening. Tailor theo audience","3":"Giao việc theo 5W1H. Trình bày cấu trúc. Email subject rõ. Meeting có agenda","2":"Có what nhưng thiếu why, when, how. Dài dòng. Hay hiểu lầm","1":"Giao việc không rõ. Thông tin rải rác. Không phản hồi hoặc muộn"}},
+            {"id":32,"text":"Meetings của người này hiệu quả không?","levels":{"5":"Chỉ họp khi cần. Async tối đa. Meetings để decide, không phải inform","4":"Hiệu quả: đúng người, đúng nội dung, đúng thời lượng. Pre-read. Decision log rõ","3":"Có agenda. Đúng giờ, đúng topic. Meeting notes & action items ghi nhận","2":"Có họp nhưng thiếu chuẩn bị. Thảo luận không tập trung. Action items không rõ","1":"Họp lan man không kết luận. Không agenda/notes. Lãng phí thời gian"}},
+            {"id":33,"text":"Khi có conflict/difficult conversation, người này xử lý thế nào?","levels":{"5":"Turn conflict thành cơ hội. Facilitation để team tự resolve. Political savvy","4":"Difficult conversations mà giữ được quan hệ. Conflict resolution hiệu quả. Win-win","3":"Confront trực tiếp nhưng respectful. Focus vấn đề không phải cá nhân. Chưa skilled","2":"Biết có vấn đề nhưng không dám confront. Kéo dài","1":"Tránh né hoặc cảm tính. Conflict leo thang"}},
+            {"id":34,"text":"Team có tin và follow người này không? Tại sao?","levels":{"5":"Transformational: thay đổi mindset không chỉ behavior. Tạo movement: đội tự lan tỏa vision","4":"Connect công việc với purpose. Inspire bằng hành động. Intrinsic motivation","3":"Vision rõ & truyền đạt được. Celebrate wins. Team cảm thấy trân trọng. Motivation extrinsic","2":"Động viên hời hợt. Không vision. Team không tin","1":"Không ảnh hưởng. Team làm theo lệnh, không passion. Turnover cao"}},
+            {"id":35,"text":"Trong crisis/pressure cao, người này dẫn dắt team ra sao?","levels":{"5":"Best moments trong crisis: unite team, đột phá. Team sẵn sàng hy sinh ngắn hạn vì dài hạn","4":"Dẫn với clarity & calmness. Turn adversity thành rallying point","3":"Bình tĩnh, có plan. Truyền tự tin cho team. Vượt khó khăn","2":"Cố giữ tinh thần nhưng không action cụ thể. Khẩu hiệu rỗng","1":"Hoảng loạn hoặc im lặng. Team mất phương hướng"}},
+            {"id":36,"text":"Người này 'walk the talk' (hành động nhất quán với lời nói)?","levels":{"5":"Authentic leadership: values rõ, không xê dịch. Legacy: ảnh hưởng lâu dài sau khi rời","4":"Role model: làm trước khi yêu cầu. Lead by example mọi tình huống","3":"Hành động phù hợp lời nói. Có thể tin được","2":"Có lúc nhất quán, có lúc không. Credibility không vững","1":"Nói một đằng làm một nẻo. Mất uy tín"}},
+            {"id":37,"text":"Người này khiến team tin vào sản phẩm/vision mới của PATI không?","levels":{"5":"Team trở thành evangelist, tự lan tỏa vision. Passionate về product","4":"Team excited về roadmap. Tự nguyện contribute ý tưởng","3":"Team hiểu & support vision. Làm theo nhưng chưa passionate","2":"Team làm vì được giao, không tin vào vision","1":"Team hoài nghi hoặc không quan tâm"}},
+            {"id":38,"text":"Trình độ chuyên môn của người này trong lĩnh vực quản lý?","levels":{"5":"Thought leader được industry công nhận. Định hình trend. R&D liên tục. Mentor cả industry","4":"Top 10% trong mảng. Giải mọi ca khó. Chủ động học. Đưa innovation vào team","3":"Chuyên gia vững, được respect. Giải 80% ca khó. Đào tạo được nhân viên","2":"Trung bình. Giải việc thường ngày, bó tay ca khó","1":"Yếu. Không giải quyết được, phải nhờ nhân viên. Mất uy tín"}},
+            {"id":39,"text":"Người này cập nhật kiến thức và xu hướng mới thế nào?","levels":{"5":"Contribute vào industry: speaking, writing, research. Network top experts global. Build IP cho PATI","4":"Chủ động học: conference, research. Luôn biết trend mới. Apply vào việc","3":"Đọc sách, theo tin ngành. Update đều nhưng chưa deep dive","2":"Học lỏng lẻo, không system. Theo kịp khó","1":"Không học. Kiến thức lỗi thời"}},
+            {"id":40,"text":"Người này đưa innovation/best practices vào team thế nào?","levels":{"5":"Tạo best practices mới cho industry. Team là benchmark. Publish case studies","4":"Chủ động đổi mới. Pilot test rồi scale. Team dùng cutting-edge practices","3":"Thử nghiệm best practices từ ngoài. Áp dụng khi phù hợp","2":"Nghe nhưng không apply. Sợ thay đổi","1":"Không innovation. Làm theo cách cũ"}},
+            {"id":41,"text":"Người này nghiên cứu thị trường, nhận diện trend mới (trend sensing) ra sao?","levels":{"5":"First mover: nhận diện trend trước market. Định hình hướng đi cho industry","4":"Ra ngoài thị trường thường xuyên. Nhận diện trend sớm. Chuyển hóa thành sáng kiến cụ thể","3":"Theo dõi trend cơ bản. Biết trend khi đã rõ ràng","2":"Ít theo dõi. Biết trend khi đã late","1":"Không follow trend. Bị động"}}
+        ];
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
@@ -446,29 +486,27 @@
             generateQuestionSteps();
         });
 
-        // Load BOM list from Google Sheet - FIXED VERSION
+        // Handle role change
+        function handleRoleChange() {
+            selectedRole = document.getElementById('raterRole').value;
+        }
+
+        // Load BOM list - FIXED
         async function loadBOMList() {
             const select = document.getElementById('assesseeName');
             
             try {
-                console.log('🔄 Đang tải danh sách BOM từ:', APPS_SCRIPT_URL + '?action=getConfig');
-                
                 const response = await fetch(APPS_SCRIPT_URL + '?action=getConfig', {
                     method: 'GET',
                     mode: 'cors'
                 });
-                
-                console.log('✅ Response status:', response.status);
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
                 const text = await response.text();
-                console.log('📦 Raw response:', text.substring(0, 100) + '...');
-                
                 const data = JSON.parse(text);
-                console.log('✅ Parsed data:', data);
                 
                 if (data.status === 'success' && data.data && data.data.bomList) {
                     select.innerHTML = '<option value="">-- Chọn người được đánh giá --</option>';
@@ -479,15 +517,11 @@
                         option.textContent = `${bom.name} (${bom.department})`;
                         select.appendChild(option);
                     });
-                    
-                    console.log('✅ Đã load thành công:', data.data.bomList.length, 'BOMs');
                 } else {
-                    throw new Error('Invalid data format from API');
+                    throw new Error('Invalid data format');
                 }
             } catch (error) {
-                console.error('❌ Error loading BOM list:', error);
-                
-                // FALLBACK
+                console.error('Error loading BOM list:', error);
                 select.innerHTML = `
                     <option value="">-- Chọn người được đánh giá --</option>
                     <option value="Kevin">Kevin (CEO)</option>
@@ -495,72 +529,73 @@
                     <option value="Ethan">Ethan (Affiliate & Community)</option>
                     <option value="Winne">Winne (People)</option>
                 `;
-                
-                console.warn('⚠️ Đã load danh sách fallback. Kiểm tra console để debug.');
             }
         }
 
         // Generate question steps
         function generateQuestionSteps() {
-            // Step 2: Questions 1-15
+            // Step 2: Q1-15
             let html2 = '<h2>Phần 1: Câu hỏi 1-15</h2>';
-            for (let i = 0; i < 15 && i < QUESTIONS.length; i++) {
-                html2 += generateQuestionHTML(QUESTIONS[i], i + 1, 41);
+            for (let i = 0; i < 15; i++) {
+                html2 += generateQuestionHTML(QUESTIONS[i], i + 1);
             }
             document.getElementById('step2Questions').innerHTML = html2;
 
-            // Step 3: Questions 16-28
-            let html3 = '<h2>Phần 2: Câu hỏi 16-28</h2>';
-            for (let i = 15; i < 28 && i < QUESTIONS.length; i++) {
-                html3 += generateQuestionHTML(QUESTIONS[i], i + 1, 41);
+            // Step 3: Q16-30
+            let html3 = '<h2>Phần 2: Câu hỏi 16-30</h2>';
+            for (let i = 15; i < 30; i++) {
+                html3 += generateQuestionHTML(QUESTIONS[i], i + 1);
             }
             document.getElementById('step3Questions').innerHTML = html3;
 
-            // Step 4: Questions 29-41 + Open-ended
-            let html4 = '<h2>Phần 3: Câu hỏi 29-41 & Chia sẻ góc nhìn</h2>';
-            for (let i = 28; i < QUESTIONS.length; i++) {
-                html4 += generateQuestionHTML(QUESTIONS[i], i + 1, 41);
+            // Step 4: Q31-41 + Feedback
+            let html4 = '<h2>Phần 3: Câu hỏi 31-41</h2>';
+            for (let i = 30; i < 41; i++) {
+                html4 += generateQuestionHTML(QUESTIONS[i], i + 1);
             }
             
-            html4 += '<div class="step-divider">━━━━━━━━━━━━━━━━━━━━</div>';
-            html4 += '<h2>Chia sẻ góc nhìn của bạn</h2>';
-            
+            // Feedback section (conditional)
             html4 += `
-                <div class="form-group">
-                    <label class="form-label">3.1. Hãy chia sẻ một biểu hiện nổi trội nhất ở người này mà bạn ghi nhận được</label>
-                    <div class="helper-text">Mô tả cụ thể biểu hiện/hành vi/bối cảnh mà người này đã thể hiện xuất sắc</div>
-                    <textarea class="form-textarea" id="outstandingBehavior" placeholder="Ví dụ: Trong lúc dự án bị delay 2 tuần, anh ấy tất cả thời gian để xác định root cause, reorganize prioritize, và deliver on time..."></textarea>
-                </div>
+                <div id="feedbackSection" style="display:none;">
+                    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e5e5e5;">
+                    <h2>Chia sẻ góc nhìn của bạn</h2>
+                    
+                    <div class="form-group">
+                        <label class="form-label">3.1. Hãy chia sẻ một biểu hiện nổi trội nhất ở người này mà bạn ghi nhận được</label>
+                        <div class="helper-text">Mô tả cụ thể biểu hiện/hành vi/bối cảnh mà người này đã thể hiện xuất sắc</div>
+                        <textarea class="form-textarea" id="outstandingBehavior" placeholder="Ví dụ: Trong dự án X bị delay, anh ấy đã reorganize priority và deliver đúng hạn..."></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label class="form-label">3.2. Một năng lực mà bạn nghĩ là người này cần phải cải thiện ngay lập tức? Vì sao?</label>
-                    <textarea class="form-textarea" id="improvementArea" placeholder="Ví dụ: Coaching & Mentoring - Người này chưa tích cực đào tạo và phát triển team..."></textarea>
-                </div>
+                    <div class="form-group">
+                        <label class="form-label">3.2. Một năng lực mà bạn nghĩ là người này cần phải cải thiện ngay lập tức? Vì sao?</label>
+                        <textarea class="form-textarea" id="improvementArea" placeholder="Năng lực cần cải thiện và lý do..."></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label class="form-label">3.3. Theo bạn, người này sẵn sàng làm Manager chưa?</label>
-                    <select class="form-select" id="readinessLevel" required>
-                        <option value="">-- Chọn đánh giá --</option>
-                        <option value="Not Ready">Chưa sẵn sàng - Cần 12+ tháng phát triển</option>
-                        <option value="Almost Ready">Sắp sẵn sàng - Cần 6-12 tháng coaching</option>
-                        <option value="Ready">Sẵn sàng - Đáp ứng baseline yêu cầu Manager</option>
-                        <option value="Excellent">Xuất sắc - Vượt mong đợi, role model</option>
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label class="form-label">3.3. Theo bạn, người này sẵn sàng làm Manager chưa?</label>
+                        <select class="form-select" id="readinessLevel">
+                            <option value="">-- Chọn đánh giá --</option>
+                            <option value="Not Ready">Chưa sẵn sàng - Cần 12+ tháng phát triển</option>
+                            <option value="Almost Ready">Sắp sẵn sàng - Cần 6-12 tháng coaching</option>
+                            <option value="Ready">Sẵn sàng - Đáp ứng baseline yêu cầu Manager</option>
+                            <option value="Excellent">Xuất sắc - Vượt mong đợi, role model</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label class="form-label">Lý do</label>
-                    <input type="text" class="form-input" id="readinessReason" placeholder="Giải thích lý do vắn tắt...">
+                    <div class="form-group">
+                        <label class="form-label">Lý do</label>
+                        <input type="text" class="form-input" id="readinessReason" placeholder="Giải thích vắn tắt...">
+                    </div>
                 </div>
             `;
             
             document.getElementById('step4Questions').innerHTML = html4;
         }
 
-        // Generate HTML for one question
-        function generateQuestionHTML(question, questionNumber, totalQuestions) {
+        // Generate question HTML
+        function generateQuestionHTML(question, qNum) {
             let html = `<div class="question-container">
-                <div class="question-number">${questionNumber}/${totalQuestions}</div>
+                <div class="question-number">${qNum}/41</div>
                 <div class="question-text">${question.text}</div>
                 <div class="radio-group">`;
             
@@ -586,7 +621,6 @@
                 opt.classList.remove('selected');
             });
             radio.closest('.radio-option').classList.add('selected');
-            
             questionData[radio.name] = parseInt(radio.value);
         }
 
@@ -594,6 +628,17 @@
         function changeStep(direction) {
             if (direction === 1 && !validateCurrentStep()) {
                 return;
+            }
+
+            // Show/hide feedback section based on role
+            if (currentStep === 3 && direction === 1) {
+                const role = document.getElementById('raterRole').value;
+                const feedbackSection = document.getElementById('feedbackSection');
+                if (role !== 'Self') {
+                    feedbackSection.style.display = 'block';
+                } else {
+                    feedbackSection.style.display = 'none';
+                }
             }
 
             currentStep += direction;
@@ -613,19 +658,28 @@
             window.scrollTo(0, 0);
         }
 
-        // Validate current step
+        // Validate step
         function validateCurrentStep() {
             const currentStepEl = document.querySelector(`[data-step="${currentStep}"]`);
             const requiredInputs = currentStepEl.querySelectorAll('[required]');
             
             for (let input of requiredInputs) {
-                if (!input.value) {
+                if (!input.value && input.type !== 'radio') {
                     alert('Vui lòng điền đầy đủ thông tin bắt buộc');
                     input.focus();
                     return false;
                 }
+                
+                if (input.type === 'radio') {
+                    const radioName = input.name;
+                    const checked = currentStepEl.querySelector(`input[name="${radioName}"]:checked`);
+                    if (!checked) {
+                        alert('Vui lòng trả lời tất cả các câu hỏi');
+                        input.closest('.question-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        return false;
+                    }
+                }
             }
-
             return true;
         }
 
@@ -637,8 +691,8 @@
             const stepNames = [
                 'Thông tin đánh giá',
                 'Câu hỏi 1-15',
-                'Câu hỏi 16-28',
-                'Câu hỏi 29-41 & Góc nhìn'
+                'Câu hỏi 16-30',
+                'Câu hỏi 31-41 & Góc nhìn'
             ];
             
             document.getElementById('progressText').textContent = 
@@ -650,7 +704,7 @@
             const draft = {
                 raterRole: document.getElementById('raterRole').value,
                 assesseeName: document.getElementById('assesseeName').value,
-                raterEmail: document.getElementById('raterEmail').value,
+                raterName: document.getElementById('raterName').value,
                 responses: questionData,
                 timestamp: new Date().toISOString()
             };
@@ -667,26 +721,36 @@
                 if (confirm('Bạn có muốn tiếp tục bản nháp đã lưu?')) {
                     document.getElementById('raterRole').value = data.raterRole || '';
                     document.getElementById('assesseeName').value = data.assesseeName || '';
-                    document.getElementById('raterEmail').value = data.raterEmail || '';
+                    document.getElementById('raterName').value = data.raterName || '';
                     questionData = data.responses || {};
+                    
+                    Object.keys(questionData).forEach(key => {
+                        const radio = document.querySelector(`input[name="${key}"][value="${questionData[key]}"]`);
+                        if (radio) {
+                            radio.checked = true;
+                            radio.closest('.radio-option').classList.add('selected');
+                        }
+                    });
                 }
             }
         }
 
-        // Form submission
+        // Form submission - CORS FIXED
         document.getElementById('assessmentForm').addEventListener('submit', async function(e) {
             e.preventDefault();
 
             const formData = {
                 raterRole: document.getElementById('raterRole').value,
                 assesseeName: document.getElementById('assesseeName').value,
-                raterEmail: document.getElementById('raterEmail').value,
+                raterName: document.getElementById('raterName').value,
                 responses: questionData,
-                outstandingBehavior: document.getElementById('outstandingBehavior').value,
-                improvementArea: document.getElementById('improvementArea').value,
-                readinessLevel: document.getElementById('readinessLevel').value,
-                readinessReason: document.getElementById('readinessReason').value
+                outstandingBehavior: document.getElementById('outstandingBehavior')?.value || '',
+                improvementArea: document.getElementById('improvementArea')?.value || '',
+                readinessLevel: document.getElementById('readinessLevel')?.value || '',
+                readinessReason: document.getElementById('readinessReason')?.value || ''
             };
+
+            console.log('Submitting data:', formData);
 
             document.getElementById('assessmentForm').style.display = 'none';
             document.getElementById('loadingDiv').classList.add('active');
@@ -694,26 +758,24 @@
             try {
                 const response = await fetch(APPS_SCRIPT_URL, {
                     method: 'POST',
+                    mode: 'no-cors', // CORS FIX
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(formData)
                 });
 
-                const result = await response.json();
+                // With no-cors, we can't read response, so assume success
+                localStorage.removeItem('leadership_assessment_draft');
+                document.getElementById('loadingDiv').classList.remove('active');
+                document.getElementById('successMessage').classList.add('active');
 
-                if (result.status === 'success') {
-                    localStorage.removeItem('leadership_assessment_draft');
-                    document.getElementById('loadingDiv').classList.remove('active');
-                    document.getElementById('successMessage').classList.add('active');
-                } else {
-                    throw new Error(result.message || 'Unknown error');
-                }
             } catch (error) {
                 console.error('Submit error:', error);
-                alert('Có lỗi xảy ra. Vui lòng thử lại sau.');
+                alert('Có lỗi xảy ra khi gửi đánh giá. Dữ liệu đã được lưu nháp. Vui lòng thử lại sau.');
                 document.getElementById('loadingDiv').classList.remove('active');
                 document.getElementById('assessmentForm').style.display = 'block';
+                saveDraft();
             }
         });
     </script>
